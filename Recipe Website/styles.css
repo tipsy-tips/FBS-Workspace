@@ -227,7 +227,7 @@ h4 {
   height: 1px;
   position: relative;
   vertical-align: middle;
-  width: 40%;
+  width: 38%;
 }
 
 .recipeWeek__title h2::before {
@@ -283,7 +283,7 @@ h4 {
   height: 1px;
   position: relative;
   vertical-align: middle;
-  width: 84%;
+  width: 80%;
 }
 
 .recipeCollection__title h2::after {
@@ -339,6 +339,7 @@ h4 {
   background-image: url(./img/ctaBanner.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  height: 550px;
 }
 
 .cta__wrapper {
@@ -418,7 +419,7 @@ input:focus {
   height: 1px;
   position: relative;
   vertical-align: middle;
-  width: 85%;
+  width: 80%;
 }
 
 .classicCollection__title h2::after {
