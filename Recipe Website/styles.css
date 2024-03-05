@@ -1,0 +1,535 @@
+@import url("https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,100;12..72,400;12..72,700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --clr-accent: #d9964a;
+  --clr-blue: #0b5089;
+  --clr-dark: #2b2b2b;
+  --clr-light: #ffffff;
+  --clr-border: #f9e9d7;
+  --clr-gray: #666666;
+  --primary-font: "Mulish", sans-serif;
+  --seconday-font: "Playfair Display", serif;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+  scroll-behavior: smooth;
+  list-style: none;
+}
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+body {
+  color: var(--clr-dark);
+  font-family: var(--primary-font);
+  font-size: 1.6rem;
+  overflow-x: hidden;
+  line-height: 1.4;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+article,
+aside,
+footer,
+header,
+nav,
+section,
+time {
+  display: block;
+}
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 5rem;
+}
+
+h3 {
+  letter-spacing: 1rem;
+  color: #d9964a;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  color: var(--clr-gray);
+  font-family: var(--seconday-font);
+  margin-bottom: 1rem;
+}
+
+/* Header */
+.header {
+  background-color: var(--clr-semilight);
+  width: 100%;
+  z-index: 99999;
+}
+
+.recipeWeek__wrapper {
+  display: flex;
+  gap: 2rem;
+}
+
+.header__wrapper h1 {
+  padding: 2rem 0rem;
+  font-size: 3rem;
+  color: var(--clr-gray);
+  font-weight: bolder;
+}
+
+/* Home Banner */
+
+.homeBanner__wrapper {
+  display: flex;
+  flex-direction: row;
+  padding: 5rem 0;
+}
+.homeBanner {
+  background-color: var(--clr-border);
+}
+
+.homeBanner__col2 img {
+  max-width: 700px;
+  max-height: 500px;
+}
+
+.homeBanner__col1 {
+  padding: 5rem 10rem 5rem 0rem;
+}
+
+.homeBanner__col1 h1 {
+  font-size: 4rem;
+  color: var(--clr-gray);
+  font-family: var(--seconday-font);
+  margin-bottom: 2rem;
+}
+
+.homeBanner__col1 p {
+  font-size: 1.3rem;
+  margin-bottom: 3rem;
+  text-align: justify;
+  color: var(--clr-gray);
+}
+
+/* Recipe of The Week */
+
+.recipeWeek {
+  margin-bottom: 10rem;
+}
+
+.recipeWeek__title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 5rem 0;
+  color: var(--clr-accent);
+  font-family: var(--seconday-font);
+}
+
+.recipeWeek__title1 h2 {
+  overflow: hidden;
+  text-align: center;
+}
+
+.recipeWeek__title h2::before,
+.recipeWeek__title h2::after {
+  background-color: var(--clr-accent);
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 40%;
+}
+
+.recipeWeek__title h2::before {
+  right: 1.5em;
+  margin-left: -50%;
+}
+
+.recipeWeek__title h2::after {
+  left: 1.5em;
+  margin-right: -50%;
+}
+
+.recipeWeek__card {
+  width: 25%;
+}
+
+.recipeWeek__card img {
+  width: 300px;
+  height: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.recipeWeek_card--content {
+  text-align: center;
+}
+
+.recipeWeek_card--content h3 {
+  font-size: 1.4rem;
+}
+
+.recipeWeek_card--content p {
+  text-align: justify;
+  color: var(--clr-gray);
+  font-size: 1.4rem;
+}
+
+/* Recipe Collection */
+
+.recipeCollection {
+  margin: 5rem 0rem;
+}
+
+.recipeCollection__title1 h2 {
+  overflow: hidden;
+  text-align: center;
+}
+
+.recipeCollection__title h2::after {
+  background-color: var(--clr-accent);
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 85%;
+}
+
+.recipeCollection__title h2::after {
+  left: 1.5em;
+  margin-right: -50%;
+}
+
+.recipeCollection__title {
+  text-align: left;
+  font-size: 2rem;
+  margin: 5rem 0;
+  color: var(--clr-accent);
+  font-family: var(--seconday-font);
+}
+
+.recipeCollection__card {
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.recipeCollection__wrapper div:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.recipeCollection__card--left {
+  width: 50%;
+}
+.recipeCollection__card--right {
+  width: 50%;
+}
+
+.recipeCollection__card--left img {
+  width: 600px;
+}
+
+.recipeCollection__card--right h4 {
+  font-size: 3rem;
+}
+
+.recipeCollection__card--right p {
+  font-size: 1.5rem;
+  margin-bottom: 4rem;
+  font-weight: normal;
+  color: var(--clr-gray);
+  text-align: justify;
+}
+
+/* CTA */
+
+.cta {
+  background-image: url(./img/ctaBanner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cta__wrapper {
+  padding: 20rem 0rem;
+}
+
+.cta__content {
+  text-align: center;
+  color: var(--clr-light);
+}
+
+.cta__content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.cta__content h1 {
+  font-size: 5rem;
+  font-family: var(--seconday-font);
+  margin-bottom: 2rem;
+}
+
+input[type="text"] {
+  width: 35%;
+  padding: 12px 1rem;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  font-family: var(--primary-font);
+  border-radius: 0.5rem 0rem 0rem 0.5rem;
+  background-color: #ffffffc4;
+}
+
+input:focus {
+  outline: none;
+}
+
+.cta__content--btn button {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  border-radius: 0rem 0.5rem 0.5rem 0rem;
+  padding: 12px 24px;
+  border: 0;
+  color: #fff;
+  background: var(--clr-accent);
+  line-height: 1.15;
+  font-size: 16px;
+  :hover {
+    transition: all 0.1s ease;
+    box-shadow: 0 0 0 0 #fff, 0 0 0 3px #1de9b6;
+  }
+}
+
+.cta__content--btn button h5 {
+  font-size: 1.4rem;
+  padding: 0 4rem;
+  font-weight: bolder;
+}
+
+/* Classic Collection */
+
+.classicCollection {
+  margin: 2rem 0rem;
+}
+
+.classicCollection__title1 h2 {
+  overflow: hidden;
+  text-align: center;
+}
+
+.classicCollection__title h2::after {
+  background-color: var(--clr-accent);
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 85%;
+}
+
+.classicCollection__title h2::after {
+  left: 1.5em;
+  margin-right: -50%;
+}
+
+.classicCollection__title {
+  text-align: left;
+  font-size: 2.5rem;
+  margin: 5rem 0;
+  color: var(--clr-accent);
+  font-family: var(--seconday-font);
+}
+
+.classicCollection__card {
+  width: 33%;
+  margin-bottom: 3rem;
+}
+
+.classicCollection__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.classicCollection__card--content--left img {
+  height: 130px;
+  width: 90px;
+}
+
+.classicCollection__card--content {
+  display: flex;
+  gap: 1rem;
+}
+
+.classicCollection__card--content--right h4 {
+  font-size: 2rem;
+}
+
+.classicCollection__card--content--right h3 {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.classicCollection__card--content--right a {
+  font-size: 1.5rem;
+  color: var(--clr-gray);
+}
+
+.classicCollection__card--content--right ul {
+  display: flex;
+  color: var(--clr-accent);
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+
+.footer {
+  background-color: var(--clr-border);
+  padding: 5rem 0rem;
+}
+
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__content ul {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.footer__content h1 {
+  font-size: 2.5rem;
+  color: var(--clr-gray);
+  font-weight: 700;
+}
+
+.footer__content h2 {
+  color: var(--clr-gray);
+  font-size: 1.3rem;
+}
+
+.footer__content li a {
+  color: var(--clr-gray);
+}
+
+.footer__content li a:hover {
+  color: var(--clr-dark);
+  font-weight: 700;
+}
+
+/* REPEATABLES */
+
+.btn {
+  background-color: transparent;
+  border: transparent;
+  padding: 1rem 2rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  color: transparent;
+  font-size: 1.3rem;
+}
+
+.btn.bg--light {
+  background-color: var(--clr-accent);
+  color: var(--clr-light);
+}
+
+.btn.btn.bg--light:hover {
+  background-color: var(--clr-dark);
+  color: var(--clr-accent);
+}
