@@ -166,12 +166,9 @@ img {
 }
 
 /* HEADER RESPONSIVE*/
-.header .toggle__menu {
-  display: none !important;
-}
 
 .header .toggle__menu {
-  display: flex !important;
+  display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }

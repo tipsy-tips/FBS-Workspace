@@ -177,13 +177,13 @@ h4 {
   background-color: var(--clr-border);
 }
 
-.homeBanner__col2 img {
-  max-width: 700px;
-  max-height: 500px;
+.homeBanner__col2 {
+  width: 50%;
 }
 
 .homeBanner__col1 {
   padding: 5rem 10rem 5rem 0rem;
+  width: 50%;
 }
 
 .homeBanner__col1 h1 {
