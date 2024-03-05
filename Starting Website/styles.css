@@ -166,14 +166,17 @@ img {
 }
 
 /* HEADER RESPONSIVE*/
-
 .header .toggle__menu {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  display: none;
 }
 
 @media screen and (max-width: 520px) {
+  .header .toggle__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
   .header .toggle__menu span {
     color: var(--clr-primary);
     display: block;
