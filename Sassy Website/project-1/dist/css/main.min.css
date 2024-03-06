@@ -55,27 +55,132 @@ p {
   align-items: center;
 }
 .header__wrapper .toggle__button {
-  margin-right: 5rem;
+  margin-right: 1rem;
 }
 .header__wrapper .toggle__button span {
   display: block;
   width: 3rem;
   height: 0.4rem;
-  background-color: #d98084;
+  background-color: #db0007;
   margin-bottom: 0.35rem;
 }
-
-.banner {
-  display: none;
+.header .dropdown {
+  z-index: 99999;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.9);
+  top: 0;
+  left: 0;
+}
+.header .dropdown button {
+  background-color: transparent;
+  border: none;
+  font-size: 3rem;
+  color: #ffbc0d;
+  padding: 1rem;
+  display: flex;
+  justify-content: end;
+  width: 100%;
+}
+.header .dropdown .nav a {
+  color: #db0007;
+}
+.header .dropdown .nav ul {
+  list-style: none;
+}
+.header .dropdown .nav__menu {
+  margin-left: 5rem;
+}
+.header .dropdown .nav__menu li {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.header .dropdown .nav__menu li .nav__submenu {
+  margin-left: 2rem;
+}
+.header .dropdown .nav__menu li .nav__submenu li {
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+.header .dropdown__footer {
+  margin-top: 4rem;
+  text-align: center;
+}
+.header .dropdown__footer img {
+  margin: 0 auto;
+}
+.header .dropdown__footer a {
+  font-size: 1rem;
 }
 
+.footer {
+  background-color: #ffbc0d;
+  padding: 5rem 0;
+}
+.footer__action {
+  margin-bottom: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.footer__action ul {
+  list-style: none;
+}
+.footer__action ul li {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.footer__action ul li img {
+  width: 60%;
+  margin-bottom: 1.3rem;
+}
+.footer__action img {
+  justify-self: center;
+}
+.footer__connect ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+.footer__connect ul i {
+  font-size: 2.5rem;
+  color: #db0007;
+}
+
+.tns-outer {
+  position: relative;
+}
+.tns-outer .tns-nav {
+  z-index: 999;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translate(-50%);
+}
+.tns-outer .tns-nav button {
+  margin: 0 0.5rem;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  border: none;
+  background-color: #db0007;
+}
+.tns-outer .tns-nav button.tns-nav-active {
+  background-color: gray;
+}
+
+.cards {
+  padding: 10rem 0;
+}
 .cards__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
 .cards .card {
-  border-radius: 5rem;
+  border-radius: 2rem;
   overflow: hidden;
   position: relative;
 }
@@ -85,6 +190,7 @@ p {
   -o-object-fit: cover;
      object-fit: cover;
   aspect-ratio: 1/2;
+  transition: ease-in-out 0.5s;
 }
 .cards .card h4 {
   position: absolute;

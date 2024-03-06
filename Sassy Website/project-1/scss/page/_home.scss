@@ -1,12 +1,10 @@
 @use "../base" as *;
 @use "../layout" as *;
 @use "../abstract/" as *;
-
-.banner {
-  display: none;
-}
+@use "../vendor/" as *;
 
 .cards {
+  padding: 10rem 0;
   &__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -14,7 +12,7 @@
   }
 
   .card {
-    border-radius: 5rem;
+    border-radius: 2rem;
     overflow: hidden;
     position: relative;
     img {
@@ -22,6 +20,7 @@
       height: 162px;
       object-fit: cover;
       aspect-ratio: 1 / 2;
+      transition: ease-in-out 0.5s;
     }
 
     h4 {
