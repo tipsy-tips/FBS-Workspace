@@ -1,0 +1,40 @@
+@use "../base" as *;
+@use "../layout" as *;
+@use "../abstract/" as *;
+
+.banner {
+  display: none;
+}
+
+.cards {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .card {
+    border-radius: 5rem;
+    overflow: hidden;
+    position: relative;
+    img {
+      width: 100%;
+      height: 162px;
+      object-fit: cover;
+      aspect-ratio: 1 / 2;
+    }
+
+    h4 {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      text-align: center;
+      transform: translateX(-50%);
+      color: $clr--light;
+    }
+
+    &:hover img {
+      transform: scale(1.2);
+    }
+  }
+}
