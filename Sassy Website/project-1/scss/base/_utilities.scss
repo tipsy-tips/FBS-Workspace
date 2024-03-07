@@ -9,10 +9,34 @@ $colors: (
 );
 
 @each $key, $val in $colors {
-  .bg-#{$key} {
+  .bgc-#{$key} {
     background-color: #{$val};
   }
-  .bg-#{$key} {
+  .clr-#{$key} {
     color: #{$val};
+  }
+}
+
+$displays: flex, grid, block, inline;
+
+@each $display in $displays {
+  .#{$display} {
+    display: #{$display};
+  }
+}
+
+@for $i from 1 through 10 {
+  .mb-#{$i} {
+    margin-bottom: #{$i}rem;
+  }
+  .mx-#{$i} {
+    margin: 0 #{$i}rem;
+  }
+  .my-#{$i} {
+    margin: #{$i}rem 0;
+  }
+
+  .p-#{$i} {
+    padding: #{$i}rem;
   }
 }

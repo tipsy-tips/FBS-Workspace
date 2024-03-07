@@ -1,0 +1,31 @@
+@use "../abstract/" as *;
+
+.banner--family {
+  background-image: url("../../img/family/Family-MobileBanner-banner-mobile.jpeg");
+  @include mediaQuery {
+    background-image: url("../../img//family/Family-DesktopBanner-banner.jpeg");
+    min-height: 40rem;
+  }
+}
+
+.activities {
+  &__wrapper {
+  }
+  &__blurb {
+    img {
+      height: 370px;
+      border-radius: 2rem;
+    }
+    h2 {
+      font-size: clamp(3rem, 10vw, 2rem);
+      font-weight: 700;
+    }
+    a {
+      @include button(1rem 10rem);
+      width: 100%;
+      border-radius: 1rem;
+      font-size: clamp(2.5rem, 10vw, 1rem);
+      font-weight: 700;
+    }
+  }
+}

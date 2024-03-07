@@ -48,44 +48,220 @@ p {
   margin-bottom: 1.3rem;
 }
 
-.bg-primary {
+.bgc-primary {
   background-color: #ffbc0d;
 }
 
-.bg-primary {
+.clr-primary {
   color: #ffbc0d;
 }
 
-.bg-secondary {
+.bgc-secondary {
   background-color: #db0007;
 }
 
-.bg-secondary {
+.clr-secondary {
   color: #db0007;
 }
 
-.bg-accent {
+.bgc-accent {
   background-color: #d98084;
 }
 
-.bg-accent {
+.clr-accent {
   color: #d98084;
 }
 
-.bg-dark {
+.bgc-dark {
   background-color: #333333;
 }
 
-.bg-dark {
+.clr-dark {
   color: #333333;
 }
 
-.bg-light {
+.bgc-light {
   background-color: #fff;
 }
 
-.bg-light {
+.clr-light {
   color: #fff;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mx-1 {
+  margin: 0 1rem;
+}
+
+.my-1 {
+  margin: 1rem 0;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mx-2 {
+  margin: 0 2rem;
+}
+
+.my-2 {
+  margin: 2rem 0;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.mb-3 {
+  margin-bottom: 3rem;
+}
+
+.mx-3 {
+  margin: 0 3rem;
+}
+
+.my-3 {
+  margin: 3rem 0;
+}
+
+.p-3 {
+  padding: 3rem;
+}
+
+.mb-4 {
+  margin-bottom: 4rem;
+}
+
+.mx-4 {
+  margin: 0 4rem;
+}
+
+.my-4 {
+  margin: 4rem 0;
+}
+
+.p-4 {
+  padding: 4rem;
+}
+
+.mb-5 {
+  margin-bottom: 5rem;
+}
+
+.mx-5 {
+  margin: 0 5rem;
+}
+
+.my-5 {
+  margin: 5rem 0;
+}
+
+.p-5 {
+  padding: 5rem;
+}
+
+.mb-6 {
+  margin-bottom: 6rem;
+}
+
+.mx-6 {
+  margin: 0 6rem;
+}
+
+.my-6 {
+  margin: 6rem 0;
+}
+
+.p-6 {
+  padding: 6rem;
+}
+
+.mb-7 {
+  margin-bottom: 7rem;
+}
+
+.mx-7 {
+  margin: 0 7rem;
+}
+
+.my-7 {
+  margin: 7rem 0;
+}
+
+.p-7 {
+  padding: 7rem;
+}
+
+.mb-8 {
+  margin-bottom: 8rem;
+}
+
+.mx-8 {
+  margin: 0 8rem;
+}
+
+.my-8 {
+  margin: 8rem 0;
+}
+
+.p-8 {
+  padding: 8rem;
+}
+
+.mb-9 {
+  margin-bottom: 9rem;
+}
+
+.mx-9 {
+  margin: 0 9rem;
+}
+
+.my-9 {
+  margin: 9rem 0;
+}
+
+.p-9 {
+  padding: 9rem;
+}
+
+.mb-10 {
+  margin-bottom: 10rem;
+}
+
+.mx-10 {
+  margin: 0 10rem;
+}
+
+.my-10 {
+  margin: 10rem 0;
+}
+
+.p-10 {
+  padding: 10rem;
 }
 
 .header__wrapper {
@@ -208,7 +384,6 @@ p {
 }
 .footer__connect ul {
   list-style: none;
-  display: flex;
   gap: 2rem;
 }
 .footer__connect ul i {
@@ -242,7 +417,7 @@ p {
   height: 20rem;
   width: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 @media (min-width: 435px) {
   .banner img {
@@ -287,7 +462,7 @@ p {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   aspect-ratio: 1/2;
   transition: ease-in-out 0.5s;
 }
@@ -303,7 +478,172 @@ p {
   transform: scale(1.2);
 }
 
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 20rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.banner h1 {
+  font-size: clamp(3rem, 10vw, 7rem);
+  font-weight: bold;
+}
+
+.banner--food {
+  background-image: url("../../img/ourFood/foodBanner-mobile.jpeg");
+}
+@media (min-width: 435px) {
+  .banner--food {
+    background-image: url("../../img/ourFood/foodBanner-desktop.jpeg");
+  }
+}
+
+.category {
+  padding: 5rem 0;
+}
+.category__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+@media (min-width: 435px) {
+  .category__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    grid-row-gap: 6rem;
+  }
+}
+.category__wrapper a {
+  justify-self: center;
+}
+.category__card {
+  position: relative;
+  border-radius: 3rem;
+  overflow: hidden;
+  height: 120px;
+  width: 120px;
+}
+@media (min-width: 435px) {
+  .category__card {
+    height: 265px;
+    width: 265px;
+  }
+}
+.category__card:hover img {
+  transform: scale(1.2);
+}
+.category__card img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 0.5s ease;
+}
+.category__card h5 {
+  position: absolute;
+  top: unset;
+  left: 50%;
+  bottom: 0;
+  right: unset;
+  font-size: clamp(1rem, 2vw, 2rem);
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.quality {
+  padding: 5rem 0;
+}
+.quality__header {
+  text-align: center;
+}
+.quality__header h3 {
+  font-size: clamp(2.5rem, 10vw, 6rem);
+}
+.quality__header h5 {
+  font-size: clamp(1.5rem, 10vw, 2rem);
+}
+.quality__wrapper {
+  background-image: url(../../img/ourFood/sectionBg.svg);
+  background-size: 12rem;
+}
+.quality__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+@media (min-width: 435px) {
+  .quality__cards {
+    flex-basis: 50%;
+    justify-content: center;
+  }
+}
+.quality__card {
+  position: relative;
+  border-radius: 3rem;
+  overflow: hidden;
+  margin-bottom: 3rem;
+}
+@media (min-width: 435px) {
+  .quality__card {
+    flex-basis: 45%;
+  }
+}
+.quality__card h4 {
+  position: absolute;
+  top: 8rem;
+  left: unset;
+  bottom: unset;
+  right: 5rem;
+  font-size: 3.6rem;
+}
+.quality__card p {
+  margin-bottom: 0;
+  text-align: justify;
+}
+@media (min-width: 435px) {
+  .quality__card p {
+    min-height: 24rem;
+    font-size: 1.4rem;
+  }
+}
+
+.banner--family {
+  background-image: url("../../img/family/Family-MobileBanner-banner-mobile.jpeg");
+}
+@media (min-width: 435px) {
+  .banner--family {
+    background-image: url("../../img//family/Family-DesktopBanner-banner.jpeg");
+    min-height: 40rem;
+  }
+}
+
+.activities__blurb img {
+  height: 370px;
+  border-radius: 2rem;
+}
+.activities__blurb h2 {
+  font-size: clamp(3rem, 10vw, 2rem);
+  font-weight: 700;
+}
+.activities__blurb a {
+  padding: 1rem 10rem;
+  background-color: #ffbc0d;
+  border-radius: 1rem;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  border-radius: 1rem;
+  font-size: clamp(2.5rem, 10vw, 1rem);
+  font-weight: 700;
+}
+
 @font-face {
   font-family: "Speedee-regular", arial, sans-serif;
   src: url(../fonts/Speedee-Regular.woff);
-} /*# sourceMappingURL=main.min.css.map */
+}/*# sourceMappingURL=main.min.css.map */
