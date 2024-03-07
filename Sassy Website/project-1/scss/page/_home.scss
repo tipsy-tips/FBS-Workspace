@@ -3,22 +3,47 @@
 @use "../abstract/" as *;
 @use "../vendor/" as *;
 
+// BANNER
+.banner {
+  img {
+    @include imgCover(20rem, 100%);
+    @include mediaQuery() {
+      height: 40rem;
+    }
+  }
+}
+
+// CARDS
 .cards {
   padding: 10rem 0;
   &__wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    @include grid(2);
+    grid-row-gap: 1rem;
+
+    @include mediaQuery {
+      @include grid(3);
+      grid-row-gap: 6rem;
+    }
+  }
+
+  a {
+    justify-self: center;
   }
 
   .card {
     border-radius: 2rem;
     overflow: hidden;
     position: relative;
+    height: 120px;
+    width: 120px;
+
+    @include mediaQuery {
+      height: 265px;
+      width: 265px;
+    }
+
     img {
-      width: 100%;
-      height: 162px;
-      object-fit: cover;
+      @include imgCover(100%);
       aspect-ratio: 1 / 2;
       transition: ease-in-out 0.5s;
     }

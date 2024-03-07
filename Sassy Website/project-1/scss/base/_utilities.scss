@@ -1,0 +1,18 @@
+@use "../abstract/" as *;
+
+$colors: (
+  "primary": $clr--primary,
+  "secondary": $clr--secondary,
+  "accent": $clr--accent,
+  "dark": $clr--dark,
+  "light": $clr--light,
+);
+
+@each $key, $val in $colors {
+  .bg-#{$key} {
+    background-color: #{$val};
+  }
+  .bg-#{$key} {
+    color: #{$val};
+  }
+}

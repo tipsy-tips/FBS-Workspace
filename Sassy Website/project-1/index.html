@@ -21,7 +21,7 @@
           <img src="./img/McDonald/logo.svg" alt="" />
 
           <div class="dropdown">
-              <button><i class="fas fa-chevron-right"></i></button>
+              <button class="close"><i class="fas fa-chevron-right"></i></button>
               <nav class="nav">
                 <ul class="nav__menu">
                   <li>
@@ -77,22 +77,50 @@
 
     <section class="banner">
       <a href="#">
-        <img src="./img/McDonald/slider-1-mobile.jpeg" alt="" />
+        <picture>
+          <source srcset="./img/McDonald/slider-1-desktop.jpeg" media="(min-width:460px)"/> 
+          <source srcset="./img/McDonald/slider-1-mobile.jpeg" media="(max-width:459px)"/>
+          <img src="./img/McDonald/slider-1-mobile.jpeg" alt="" />
+        </picture>
+
       </a>
       <a href="#">
-        <img src="./img/McDonald/slider-2-mobile.jpeg" alt="" />
+        <picture>
+          <source srcset="./img/McDonald/slider-2-desktop.jpeg" media="(min-width:460px)"/> 
+          <source srcset="./img/McDonald/slider-2-mobile.jpeg" media="(max-width:459px)"/>
+          <img src="./img/McDonald/slider-2-mobile.jpeg" alt="" />
+        </picture>
       </a>
       <a href="#">
-        <img src="./img/McDonald/slider-3-mobile.png" alt="" />
+        <picture>
+          <source srcset="./img/McDonald/slider-3-desktop.png" media="(min-width:460px)"/> 
+          <source srcset="./img/McDonald/slider-3-mobile.png" media="(max-width:459px)"/>
+          <img src="./img/McDonald/slider-3-mobile.png" alt="" />
+        </picture>
+
       </a>
       <a href="#">
-        <img src="./img/McDonald/slider-4-mobile.jpeg" alt="" />
+        <picture>
+          <source srcset="./img/McDonald/slider-4-desktop.jpeg" media="(min-width:460px)"/> 
+          <source srcset="./img/McDonald/slider-4-mobile.jpeg" media="(max-width:459px)"/>
+          <img src="./img/McDonald/slider-4-mobile.jpeg" alt="" />
+        </picture>
+
       </a>
       <a href="#">
-        <img src="./img/McDonald/slider-5-mobile.jpeg" alt="" />
+        <picture>
+          <source srcset="./img/McDonald/slider-5-desktop.jpeg" media="(min-width:460px)"/> 
+          <source srcset="./img/McDonald/slider-5-mobile.jpeg" media="(max-width:459px)"/>
+          <img src="./img/McDonald/slider-5-mobile.jpeg" alt="" />
+        </picture>
+
       </a>
       <a href="#">
-        <img src="./img/McDonald/slider-6-mobile.jpeg" alt="" />
+        <picture>
+          <source srcset="./img/McDonald/slider-6-desktop.jpeg" media="(min-width:460px)"/> 
+          <source srcset="./img/McDonald/slider-6-mobile.jpeg" media="(max-width:459px)"/>
+          <img src="./img/McDonald/slider-6-mobile.jpeg" alt="" />
+        </picture>
       </a>
     </section>
 
@@ -139,7 +167,7 @@
       </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer bg-primary">
       <div class="container">
         <div class="footer__wrapper">
           <div class="footer__action">
@@ -163,7 +191,7 @@
             <li><a href="#">Family Activities</a></li>
           </ul>
           </div>
-
+          
           <div class="footer__connect">
             <p>Follow us on</p>
             <ul>
@@ -181,6 +209,8 @@
         </div>
       </div>
     </footer>
+
+
       <!-- Scripts -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
 
@@ -193,6 +223,24 @@
           controls: false,
           autoplayButtonOutput: false
         });
+
+        const toggleBtn = document.querySelector('.toggle__button')
+        const dropdown = document.querySelector('.dropdown')
+        const closeBtn = document.querySelector('.close')
+
+        toggleBtn.addEventListener('click', ()=> {
+          dropdown.classList.add('show');
+          toggleBtn.classList.add('cross');
+        })
+
+        closeBtn.addEventListener('click', ()=> {
+          dropdown.classList.remove('show');
+          toggleBtn.classList.remove('cross');
+        })
+
       </script>
+
+
+
   </body>
 </html>

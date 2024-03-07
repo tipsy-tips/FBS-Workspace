@@ -1,12 +1,24 @@
 @use "../abstract/" as *;
 
+// footer
 .footer {
-  background-color: $clr--primary;
   padding: 5rem 0;
+
+  // footer__wrapper
+  &__wrapper {
+    @include mediaQuery {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  // footer__action
   &__action {
     margin-bottom: 4rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    @include grid(2);
+    @include mediaQuery {
+      @include grid(4);
+    }
     gap: 2rem;
 
     ul {
@@ -26,6 +38,7 @@
     }
   }
 
+  // footer__action
   &__connect {
     ul {
       list-style: none;

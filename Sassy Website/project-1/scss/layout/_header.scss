@@ -18,6 +18,14 @@
         margin-bottom: 0.35rem;
       }
     }
+    .toggle__button.cross {
+      opacity: 0;
+    }
+  }
+
+  .dropdown.show {
+    opacity: 1;
+    visibility: visible;
   }
 
   .dropdown {
@@ -28,7 +36,10 @@
     background-color: rgba($clr--light, 0.9);
     top: 0;
     left: 0;
-    
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease-in-out;
+
     button {
       background-color: transparent;
       border: none;
@@ -38,6 +49,11 @@
       display: flex;
       justify-content: end;
       width: 100%;
+
+      i {
+        margin-right: 2rem;
+        margin-top: 1rem;
+      }
     }
 
     .nav {
