@@ -16,6 +16,16 @@ body {
   min-height: 100vh;
 }
 
+@font-face {
+  font-family: "Speedee-regular";
+  font-style: regular;
+  src: url(../../fonts/Speedee-Regular.woff) format("woff");
+}
+@font-face {
+  font-family: "Speedee-bold";
+  font-style: bold;
+  src: url(../../fonts/Speedee-Bold.woff) format("woff");
+}
 body {
   font-family: "Speedee-regular", arial, sans-serif;
   color: #333333;
@@ -38,14 +48,8 @@ a {
   color: #333333;
 }
 
-h1 {
-  font-size: clamp(2rem, 6vw, 5rem);
-  margin-bottom: 2.5rem;
-}
-
 p {
   font-size: clamp(1.4rem, 6vw, 1.6rem);
-  margin-bottom: 1.3rem;
 }
 
 .bgc-primary {
@@ -104,8 +108,36 @@ p {
   display: inline;
 }
 
+.align-left {
+  text-align: flip(left, right);
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: flip(right, left);
+}
+
+.align-justify {
+  text-align: justify;
+}
+
+.bold {
+  font-family: "Speedee-bold", Arial, Helvetica, sans-serif;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
 .mb-1 {
   margin-bottom: 1rem;
+}
+
+.mt-1 {
+  margin-top: 1rem;
 }
 
 .mx-1 {
@@ -116,12 +148,20 @@ p {
   margin: 1rem 0;
 }
 
+.fs-1 {
+  font-size: 1rem;
+}
+
 .p-1 {
   padding: 1rem;
 }
 
 .mb-2 {
   margin-bottom: 2rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
 }
 
 .mx-2 {
@@ -132,12 +172,20 @@ p {
   margin: 2rem 0;
 }
 
+.fs-2 {
+  font-size: 2rem;
+}
+
 .p-2 {
   padding: 2rem;
 }
 
 .mb-3 {
   margin-bottom: 3rem;
+}
+
+.mt-3 {
+  margin-top: 3rem;
 }
 
 .mx-3 {
@@ -148,12 +196,20 @@ p {
   margin: 3rem 0;
 }
 
+.fs-3 {
+  font-size: 3rem;
+}
+
 .p-3 {
   padding: 3rem;
 }
 
 .mb-4 {
   margin-bottom: 4rem;
+}
+
+.mt-4 {
+  margin-top: 4rem;
 }
 
 .mx-4 {
@@ -164,12 +220,20 @@ p {
   margin: 4rem 0;
 }
 
+.fs-4 {
+  font-size: 4rem;
+}
+
 .p-4 {
   padding: 4rem;
 }
 
 .mb-5 {
   margin-bottom: 5rem;
+}
+
+.mt-5 {
+  margin-top: 5rem;
 }
 
 .mx-5 {
@@ -180,12 +244,20 @@ p {
   margin: 5rem 0;
 }
 
+.fs-5 {
+  font-size: 5rem;
+}
+
 .p-5 {
   padding: 5rem;
 }
 
 .mb-6 {
   margin-bottom: 6rem;
+}
+
+.mt-6 {
+  margin-top: 6rem;
 }
 
 .mx-6 {
@@ -196,12 +268,20 @@ p {
   margin: 6rem 0;
 }
 
+.fs-6 {
+  font-size: 6rem;
+}
+
 .p-6 {
   padding: 6rem;
 }
 
 .mb-7 {
   margin-bottom: 7rem;
+}
+
+.mt-7 {
+  margin-top: 7rem;
 }
 
 .mx-7 {
@@ -212,12 +292,20 @@ p {
   margin: 7rem 0;
 }
 
+.fs-7 {
+  font-size: 7rem;
+}
+
 .p-7 {
   padding: 7rem;
 }
 
 .mb-8 {
   margin-bottom: 8rem;
+}
+
+.mt-8 {
+  margin-top: 8rem;
 }
 
 .mx-8 {
@@ -228,12 +316,20 @@ p {
   margin: 8rem 0;
 }
 
+.fs-8 {
+  font-size: 8rem;
+}
+
 .p-8 {
   padding: 8rem;
 }
 
 .mb-9 {
   margin-bottom: 9rem;
+}
+
+.mt-9 {
+  margin-top: 9rem;
 }
 
 .mx-9 {
@@ -244,6 +340,10 @@ p {
   margin: 9rem 0;
 }
 
+.fs-9 {
+  font-size: 9rem;
+}
+
 .p-9 {
   padding: 9rem;
 }
@@ -252,12 +352,20 @@ p {
   margin-bottom: 10rem;
 }
 
+.mt-10 {
+  margin-top: 10rem;
+}
+
 .mx-10 {
   margin: 0 10rem;
 }
 
 .my-10 {
   margin: 10rem 0;
+}
+
+.fs-10 {
+  font-size: 10rem;
 }
 
 .p-10 {
@@ -348,7 +456,7 @@ p {
 .footer {
   padding: 5rem 0;
 }
-@media (min-width: 435px) {
+@media (min-width: 800px) {
   .footer__wrapper {
     display: flex;
     justify-content: center;
@@ -361,7 +469,7 @@ p {
   grid-gap: 1rem;
   gap: 2rem;
 }
-@media (min-width: 435px) {
+@media (min-width: 800px) {
   .footer__action {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -419,7 +527,7 @@ p {
   -o-object-fit: cover;
      object-fit: cover;
 }
-@media (min-width: 435px) {
+@media (min-width: 800px) {
   .banner img {
     height: 40rem;
   }
@@ -434,7 +542,7 @@ p {
   grid-gap: 1rem;
   grid-row-gap: 1rem;
 }
-@media (min-width: 435px) {
+@media (min-width: 800px) {
   .cards__wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -452,7 +560,7 @@ p {
   height: 120px;
   width: 120px;
 }
-@media (min-width: 435px) {
+@media (min-width: 800px) {
   .cards .card {
     height: 265px;
     width: 265px;
@@ -495,7 +603,7 @@ p {
 .banner--food {
   background-image: url("../../img/ourFood/foodBanner-mobile.jpeg");
 }
-@media (min-width: 435px) {
+@media (min-width: 800px) {
   .banner--food {
     background-image: url("../../img/ourFood/foodBanner-desktop.jpeg");
   }
@@ -509,7 +617,7 @@ p {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
 }
-@media (min-width: 435px) {
+@media (min-width: 800px) {
   .category__wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -527,7 +635,7 @@ p {
   height: 120px;
   width: 120px;
 }
-@media (min-width: 435px) {
+@media (min-width: 800px) {
   .category__card {
     height: 265px;
     width: 265px;
@@ -575,7 +683,7 @@ p {
   flex-wrap: wrap;
   gap: 2rem;
 }
-@media (min-width: 435px) {
+@media (min-width: 800px) {
   .quality__cards {
     flex-basis: 50%;
     justify-content: center;
@@ -587,7 +695,7 @@ p {
   overflow: hidden;
   margin-bottom: 3rem;
 }
-@media (min-width: 435px) {
+@media (min-width: 800px) {
   .quality__card {
     flex-basis: 45%;
   }
@@ -604,7 +712,7 @@ p {
   margin-bottom: 0;
   text-align: justify;
 }
-@media (min-width: 435px) {
+@media (min-width: 800px) {
   .quality__card p {
     min-height: 24rem;
     font-size: 1.4rem;
@@ -614,22 +722,58 @@ p {
 .banner--family {
   background-image: url("../../img/family/Family-MobileBanner-banner-mobile.jpeg");
 }
-@media (min-width: 435px) {
+@media (min-width: 800px) {
   .banner--family {
     background-image: url("../../img//family/Family-DesktopBanner-banner.jpeg");
     min-height: 40rem;
   }
 }
 
-.activities__blurb img {
-  height: 370px;
-  border-radius: 2rem;
+.activities__wrapper {
+  margin-top: 6rem;
 }
-.activities__blurb h2 {
-  font-size: clamp(3rem, 10vw, 2rem);
+@media (min-width: 800px) {
+  .activities__wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1rem;
+  }
+}
+.activities__blurb {
+  gap: 5rem;
+}
+@media (min-width: 800px) {
+  .activities__blurb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (min-width: 800px) {
+  .activities__blurb--left {
+    width: 30%;
+  }
+}
+.activities__blurb--left img {
+  height: 450px;
+  width: 370px;
+  border-radius: 2rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 800px) {
+  .activities__blurb--right {
+    width: 50%;
+  }
+}
+.activities__blurb--right p {
+  text-align: justify;
+}
+.activities__blurb--right h2 {
+  font-size: clamp(1rem, 7vw, 4.8rem);
   font-weight: 700;
 }
-.activities__blurb a {
+.activities__blurb--right a {
   padding: 1rem 10rem;
   background-color: #ffbc0d;
   border-radius: 1rem;
@@ -637,10 +781,47 @@ p {
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  font-family: "Speedee-bold";
   width: 100%;
   border-radius: 1rem;
   font-size: clamp(2.5rem, 10vw, 1rem);
-  font-weight: 700;
+  align-self: flex-end;
+}
+@media (min-width: 800px) {
+  .activities__blurb--right a {
+    width: unset;
+  }
+}
+
+.banner--nxtgen {
+  background-image: url("../../img/nxtgen/NXTGEN-PageBanner-Mobile-767x455px-banner-mobile.jpeg");
+}
+@media (min-width: 800px) {
+  .banner--nxtgen {
+    background-image: url("../../img//nxtgen/NXTGEN-PageBanner-1920x611px-banner.jpeg");
+    min-height: 40rem;
+  }
+}
+
+.stores__wrapper iframe {
+  aspect-ratio: 16/9;
+}
+.stores__wrapper .denote {
+  font-size: 1.3rem;
+}
+.stores__wrapper .capital {
+  font-size: 1.6rem;
+  margin-bottom: 8rem;
+}
+.stores__wrapper .capital .city {
+  margin-bottom: 3rem;
+}
+.stores__wrapper .capital .city p {
+  font-size: clamp(1.5rem, 2vw, 1.8rem);
+}
+.stores__wrapper .capital .city p span {
+  font-size: 1.6rem;
+  color: #db0007;
 }
 
 @font-face {

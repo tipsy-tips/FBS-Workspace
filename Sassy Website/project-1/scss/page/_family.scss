@@ -9,21 +9,56 @@
 }
 
 .activities {
+  &__wrapper {
+    margin-top: 6rem;
+    @include mediaQuery {
+      @include grid(1);
+    }
+  }
   &__blurb {
-    img {
-      height: 370px;
-      border-radius: 2rem;
+    @include mediaQuery {
+      @include flex(center, center);
     }
-    h2 {
-      font-size: clamp(3rem, 10vw, 2rem);
-      font-weight: 700;
+    gap: 5rem;
+
+    &--left {
+      @include mediaQuery {
+        width: 30%;
+      }
+      img {
+        height: 450px;
+        width: 370px;
+        border-radius: 2rem;
+        object-fit: cover;
+      }
     }
-    a {
-      @include button(1rem 10rem);
-      width: 100%;
-      border-radius: 1rem;
-      font-size: clamp(2.5rem, 10vw, 1rem);
-      font-weight: 700;
+
+    &--right {
+      @include mediaQuery {
+        width: 50%;
+      }
+
+      p {
+        text-align: justify;
+      }
+
+      h2 {
+        font-size: clamp(1rem, 7vw, 4.8rem);
+        font-weight: 700;
+      }
+      a {
+        @include button(1rem 10rem);
+        font-family: "Speedee-bold";
+        width: 100%;
+        border-radius: 1rem;
+        font-size: clamp(2.5rem, 10vw, 1rem);
+        align-self: flex-end;
+      }
+      @include mediaQuery {
+        a {
+          width: unset;
+        }
+      }
     }
   }
 }

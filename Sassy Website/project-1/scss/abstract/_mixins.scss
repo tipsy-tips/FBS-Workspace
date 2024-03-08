@@ -7,7 +7,7 @@
 }
 
 // Responsiveness - START
-@mixin mediaQuery($width: $sm) {
+@mixin mediaQuery($width: $md) {
   @media (min-width: $width) {
     @content;
   }

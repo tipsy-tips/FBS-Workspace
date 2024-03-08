@@ -25,9 +25,36 @@ $displays: flex, grid, block, inline;
   }
 }
 
+.align-left {
+  text-align: flip(left, right);
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: flip(right, left);
+}
+
+.align-justify {
+  text-align: justify;
+}
+
+.bold {
+  font-family: "Speedee-bold", Arial, Helvetica, sans-serif;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
 @for $i from 1 through 10 {
   .mb-#{$i} {
     margin-bottom: #{$i}rem;
+  }
+  .mt-#{$i} {
+    margin-top: #{$i}rem;
   }
   .mx-#{$i} {
     margin: 0 #{$i}rem;
@@ -35,7 +62,9 @@ $displays: flex, grid, block, inline;
   .my-#{$i} {
     margin: #{$i}rem 0;
   }
-
+  .fs-#{$i} {
+    font-size: #{$i}rem;
+  }
   .p-#{$i} {
     padding: #{$i}rem;
   }
