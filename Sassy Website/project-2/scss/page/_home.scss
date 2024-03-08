@@ -1,0 +1,124 @@
+@use "../base" as *;
+@use "../layout" as *;
+@use "../abstract/" as *;
+@use "../vendor/" as *;
+@use "../components/" as *;
+
+.banner {
+  &__wrapper {
+    min-height: 80rem;
+    @include flex(flex-start, center);
+  }
+  small {
+    font-size: clamp(4rem, 6vw, 7rem);
+    opacity: 0.5;
+    font-weight: bold;
+  }
+  h1 {
+    font-size: clamp(6rem, 6vw, 15rem);
+    line-height: 1;
+    text-transform: uppercase;
+    @include flex(flex-start, flex-end);
+  }
+
+  span {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: $clr-accent;
+    transform: translate(2rem, -1.8rem);
+  }
+}
+
+.about {
+  &__wrapper {
+    @include grid(1);
+    @include mediaQuery {
+      @include unevenGrid(0.5fr 1fr, 7rem);
+    }
+  }
+
+  &__image {
+    @include mediaQuery {
+      position: relative;
+      isolation: isolate;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 3rem;
+        left: 3rem;
+        border: 0.6rem solid $clr-accent;
+        border-radius: 0.5rem;
+        color: $clr-accent;
+        background-color: transparent;
+        width: 100%;
+        height: 78%;
+        z-index: -1;
+      }
+    }
+  }
+
+  &__contact {
+    @include grid(2);
+  }
+}
+
+.skills {
+  &__wrapper {
+    @include mediaQuery {
+      @include grid(2);
+      grid-column-gap: 10rem;
+    }
+    @include grid(1);
+  }
+
+  .skillbar {
+    width: 100%;
+    height: 1.5rem;
+    background-color: #363636;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 90%;
+      height: 100%;
+      background-color: $clr-accent;
+    }
+  }
+
+  .skillbar.w-50::before {
+    width: 50%;
+  }
+  .skillbar.w-40::before {
+    width: 40%;
+  }
+}
+
+.portfolio {
+  flex-wrap: wrap;
+
+  &__img {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+    img {
+      @include imgCover(250px, 250px);
+    }
+  }
+}
+
+.services {
+  &__wrapper {
+    @include mediaQuery {
+      @include grid(3);
+      grid-gap: 4rem;
+    }
+    @include grid(1);
+  }
+  &__card {
+    padding: 5rem;
+    border: 4px solid #222222;
+  }
+}

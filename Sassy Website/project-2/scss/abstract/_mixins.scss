@@ -1,0 +1,54 @@
+@use "colors" as *;
+
+@mixin imgCover($ht: 1px, $wd: 100%) {
+  height: $ht;
+  width: $wd;
+  object-fit: cover;
+}
+
+@mixin unevenGrid($val, $gap: 1rem) {
+  display: grid;
+  grid-template-columns: $val;
+  grid-gap: $gap;
+}
+
+// Responsiveness - START
+@mixin mediaQuery($width: $sm) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+// Responsiveness - END
+
+// Grids - START
+@mixin grid($cols: 1, $gap: 1rem) {
+  display: grid;
+  grid-template-columns: repeat($cols, 1fr);
+  grid-gap: $gap;
+}
+
+@mixin absolute($top: 0, $right: 0, $bottom: 0, $left: 0) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  bottom: $bottom;
+  right: $right;
+}
+
+@mixin flex($justify: flex-start, $align: flex-start) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin button($padding: 1.5rem 3.2rem) {
+  padding: $padding;
+  background-color: $clr-primary;
+  border-radius: 1rem;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+// Grids - END
