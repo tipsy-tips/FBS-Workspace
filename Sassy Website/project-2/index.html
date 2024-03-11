@@ -9,9 +9,9 @@
   </head>
     <header class="header py-2">
       <div class="container">
-        <div class="header__wrapper flex justify-between">
+        <div class="header__wrapper flex justify-between items-center">
           <a href="#">A</a>
-          <ul class="flex gap-2">
+          <ul class=" flex gap-2" id="menu" >
             <li>
               <a href="">HOME</a>
               <a href="">ABOUT ME</a>
@@ -21,7 +21,7 @@
               <a href="">CONTACT</a>
             </li>
           </ul>
-          <i>icon</i>
+        <i class="fas fa-bars" id="toggleMenu"></i>
         </div>
       </div>
     </header>
@@ -32,7 +32,6 @@
           <div>
             <small>I'm a</small>
             <h1 class="mb-3">
-              <br />
               Graphic <br />
               Designer <span></span>
             </h1>
@@ -250,6 +249,15 @@
         <a href="#" class="p-2 bg-white text-accent">Send Message</a>
       </div>
     </section>
+    <script>
+      const toggleMenu = document.querySelector("#toggleMenu");
+      const menu = document.querySelector("#menu");
+      const body = document.querySelector("body");
 
+      toggleMenu.addEventListener('click', ()=> {
+        menu.classList.toggle('open');
+        body.classList.toggle('open');
+      });
+    </script>
   </body>
 </html>

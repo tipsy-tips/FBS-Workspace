@@ -6,7 +6,7 @@
 
 .banner {
   &__wrapper {
-    min-height: 80rem;
+    min-height: 100vh;
     @include flex(flex-start, center);
   }
   small {
@@ -25,7 +25,7 @@
     width: 2.5rem;
     height: 2.5rem;
     background-color: $clr-accent;
-    transform: translate(2rem, -1.8rem);
+    transform: translate(2rem, -1rem);
   }
 }
 
