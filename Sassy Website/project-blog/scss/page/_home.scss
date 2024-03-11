@@ -1,0 +1,81 @@
+@use "../base/" as *;
+@use "../layout/" as *;
+@use "../abstract/" as *;
+@use "../vendor/" as *;
+@use "../components/" as *;
+
+.banner {
+  img {
+    @include imgCover(250px, 100%);
+  }
+
+  p {
+    display: none;
+  }
+
+  @include mediaQuery {
+    &__wrapper {
+      @include unevenGrid(2fr 1fr, 2rem);
+    }
+    &__main {
+      border-right: 1px solid $clr-dark;
+      padding-right: 2rem;
+      p {
+        display: block;
+      }
+      img {
+        height: 50rem;
+      }
+    }
+
+    &__side {
+      img {
+        height: 20rem;
+      }
+    }
+  }
+}
+
+.articles {
+  @include mediaQuery {
+    &__card {
+      @include flex();
+      gap: 3rem;
+    }
+  }
+}
+
+.cta {
+  border-top: 1px solid $clr-dark;
+  border-bottom: 1px solid $clr-dark;
+  padding: 8rem 0;
+
+  ul {
+    @include flex(center, center);
+    flex-direction: column;
+    @include mediaQuery {
+      flex-direction: row;
+      gap: 10rem;
+    }
+  }
+
+  li {
+    width: 100%;
+    @include mediaQuery {
+      width: auto;
+    }
+  }
+
+  a {
+    min-width: 120px;
+    padding: 1.5rem;
+    background-color: $clr-dark;
+    color: $clr-light;
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 2rem;
+    @include mediaQuery {
+      display: inline-block;
+    }
+  }
+}

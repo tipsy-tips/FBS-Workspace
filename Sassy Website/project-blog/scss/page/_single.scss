@@ -1,0 +1,40 @@
+@use "../abstract/" as *;
+
+.single__banner {
+  img {
+    @include imgCover(400px, 100%);
+    @include mediaQuery {
+      @include imgCover(600px, 100%);
+    }
+  }
+
+  &__wrapper {
+    @include mediaQuery {
+      @include grid(2, 3rem);
+      margin-bottom: 5rem;
+    }
+  }
+  &__article {
+    @include mediaQuery {
+      @include flex(space-between);
+      flex-direction: column;
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+article {
+  margin-bottom: 5rem;
+  figure {
+    margin-bottom: 2rem;
+    img {
+      @include imgCover(500px, 100%);
+    }
+  }
+  figcaption {
+    font-size: 1rem;
+    text-wrap: balance;
+  }
+}
