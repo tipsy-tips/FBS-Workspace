@@ -1,0 +1,60 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.header {
+  &__wrapper {
+    ul.open {
+      visibility: visible;
+      opacity: 1;
+    }
+    ul {
+      @include mediaQuery {
+        position: static;
+        background-color: unset;
+        padding: unset;
+        width: auto;
+        height: unset;
+        visibility: visible;
+        opacity: 1;
+        li {
+          flex-direction: row !important;
+          a {
+            font-size: 2rem !important;
+          }
+        }
+      }
+      position: fixed;
+      top: 6.5rem;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 99999;
+      align-items: center;
+      flex-direction: column;
+      padding-top: 30%;
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.5s ease;
+      li {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        text-align: center;
+        a {
+          font-size: 3rem;
+          &:hover {
+            border-bottom: 2px solid $clr-secondary;
+            color: $clr-dark;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    .signup {
+      padding: 1rem 4rem;
+      background-color: $clr-secondary;
+      border-radius: 3rem;
+      color: $clr-light;
+    }
+  }
+}
