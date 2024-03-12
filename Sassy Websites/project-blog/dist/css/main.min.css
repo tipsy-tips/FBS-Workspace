@@ -40,6 +40,7 @@ body {
   background-color: var(--light);
   line-height: 1.6;
   font-size: 1.6rem;
+  color: var(--dark);
 }
 
 body.open {
@@ -65,10 +66,11 @@ h6 {
   font-weight: bold;
   font-family: "sprat-regular";
   text-wrap: balance;
+  color: var(--dark);
 }
 
 h1 {
-  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-size: clamp(3.5rem, 6vw, 5.5rem);
   margin-bottom: 2rem;
 }
 
@@ -596,6 +598,8 @@ p {
   width: 100%;
   padding: 1rem;
   border: none;
+  background-color: transparent;
+  color: var(--dark);
   border-bottom: 1px solid var(--dark);
 }
 .footer__form form button {
@@ -603,6 +607,7 @@ p {
   right: 0;
   top: 1rem;
   background-color: transparent;
+  color: var(--dark);
   border: none;
   text-transform: uppercase;
   font-weight: 700;
@@ -637,12 +642,14 @@ p {
 }
 
 .tns-controls {
+  color: var(--dark);
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 3rem;
 }
 .tns-controls button {
+  color: var(--dark);
   background-color: transparent;
   border: none;
   font-size: 3rem;
@@ -814,6 +821,190 @@ article figure img {
 article figcaption {
   font-size: 1rem;
   text-wrap: balance;
+}
+
+@media (min-width: 42rem) {
+  .contact__wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 5rem;
+  }
+}
+
+.input-wrap {
+  position: relative;
+  margin-bottom: 2rem;
+}
+.input-wrap input,
+.input-wrap textarea {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-bottom: 2px solid var(--dark);
+  outline: none;
+  background-color: transparent;
+  color: var(--dark);
+}
+.input-wrap input:focus, .input-wrap input:valid,
+.input-wrap textarea:focus,
+.input-wrap textarea:valid {
+  border-color: darkcyan;
+}
+.input-wrap input:focus + label, .input-wrap input:valid + label,
+.input-wrap textarea:focus + label,
+.input-wrap textarea:valid + label {
+  top: -1rem;
+  left: 0;
+  font-size: 1.2rem;
+  color: darkcyan;
+}
+.input-wrap label {
+  position: absolute;
+  top: 1rem;
+  opacity: 0.5;
+  font-size: 1.4rem;
+  transition: 0.5s ease;
+}
+.input-wrap span {
+  color: red;
+  font-size: 1rem;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.contact__form {
+  margin-bottom: 2rem;
+}
+.contact__form button {
+  min-width: 20rem;
+  padding: 1rem;
+  border: none;
+  text-transform: uppercase;
+  background: var(--dark);
+  color: var(--light);
+}
+
+@media (min-width: 42rem) {
+  .contact__info {
+    justify-self: flex-end;
+    align-self: flex-end;
+    transform: translateY(-10rem);
+  }
+}
+.contact__info ul {
+  margin-bottom: 2rem;
+}
+.contact__info ul li {
+  margin-bottom: 1rem;
+}
+.contact__info ul li i {
+  padding-right: 1rem;
+}
+
+.header button {
+  border: none;
+  background-color: transparent;
+  line-height: 0;
+}
+
+.books {
+  margin-bottom: 5rem;
+}
+.books img {
+  height: 400px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.books__card h4 {
+  margin: 1.5rem 0;
+}
+.books__card p {
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+.books__card button {
+  width: 100%;
+  padding: 1.2rem 1rem;
+  border: 1px solid var(--dark);
+  background-color: transparent;
+  transition: 0.5s ease;
+  color: var(--dark);
+}
+.books__card button:hover {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.selection ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  overflow-x: auto;
+}
+.selection ul a {
+  white-space: nowrap;
+}
+.selection__card {
+  margin-bottom: 3rem;
+}
+@media (min-width: 42rem) {
+  .selection__card {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    grid-gap: 5rem;
+  }
+}
+.selection__card img {
+  height: 400px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 42rem) {
+  .selection__card img {
+    height: 300px;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+.selection__card small {
+  opacity: 0.5;
+}
+.selection__card h5 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.selection__card h5 span {
+  font-size: 1.8rem;
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+.selection__card p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.selection__card button {
+  width: 100%;
+  padding: 1.5rem 1rem;
+  border: 1px solid var(--dark);
+  background-color: transparent;
+  transition: 0.5s ease;
+  color: var(--dark);
+}
+@media (min-width: 42rem) {
+  .selection__card button {
+    width: 20%;
+  }
+}
+.selection__card button:hover {
+  background-color: var(--dark);
+  color: var(--light);
 }
 
 @font-face {

@@ -23,14 +23,14 @@
             <li>
               <a href="./index.html">Home</a>
               <a href="./single.html">Blog</a>
-              <a href="#">Podcasts</a>
-              <a href="#">Books</a>
+              <a href="./contact.html">Contact</a>
+              <a href="./books.html">Books</a>
               <a href="#">About</a>
             </li>
           </ul>
           <div class="flex gap-1">
             <i class="fas fa-shopping-bag" id="toggleMenu"></i>
-            <i class="fas fa-user" id="toggleMenu"></i>
+            <i class="theme far fa-sun" id="toggleMenu"></i>
           </div>
         </div>
       </div>
@@ -377,6 +377,25 @@
             gutter: 20,
           },
         },
+      });
+
+      const btnTheme = document.querySelector(".theme");
+      const root = document.querySelector(":root");
+
+      btnTheme.addEventListener("click", () => {
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+          root.style.setProperty("--light", "#fff");
+          root.style.setProperty("--dark", "#1f1f1f");
+          icon.classList.remove("fa-moon");
+          icon.classList.add("fa-sun");
+        } else {
+          body.classList.add("dark");
+          root.style.setProperty("--light", "#1f1f1f");
+          root.style.setProperty("--dark", "#fff");
+          icon.classList.remove("fa-sun");
+          icon.classList.add("fa-moon");
+        }
       });
     </script>
   </body>

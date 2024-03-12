@@ -4,10 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
-    />
     <link rel="stylesheet" href="./dist/css/main.min.css" />
     <link
       rel="stylesheet"
@@ -36,91 +32,50 @@
       </div>
     </header>
 
-    <section class="single__banner">
+    <main class="contact">
       <div class="container">
-        <div class="single__banner__wrapper">
-          <img src="https://via.placeholder.com/300x500" alt="" />
-          <div class="single__banner__article">
-            <div>
-              <div class="card__info">
-                <ul>
-                  <li>Feb 2</li>
-                  <li><i class="fas fa-circle"></i></li>
-                  <li>5 Mins</li>
-                </ul>
-                <small>By: Elen Jhosh</small>
+        <h1>Contact Us</h1>
+        <p class="mb-5">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+          perferendis quaerat voluptas asperiores dolorem numquam commodi saepe
+          reprehenderit esse ipsa.
+        </p>
+        <div class="contact__wrapper">
+          <div class="contact__form">
+            <form action="">
+              <div class="input-wrap">
+                <input type="text" required />
+                <label for="">Name</label>
+                <span>Required*</span>
               </div>
-              <h1>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
-                facere.
-              </h1>
-            </div>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Necessitatibus id voluptatibus voluptatem, nulla minima dicta
-              magnam molestiae ipsum. Nesciunt iste vitae minima corrupti
-              laboriosam repudiandae, odio soluta aliquid eveniet obcaecati ex
-              alias numquam ipsa velit?
-            </p>
+              <div class="input-wrap">
+                <input type="text" required />
+                <label for="">Subject</label>
+                <span>Required*</span>
+              </div>
+              <div class="input-wrap">
+                <input type="text" required />
+                <label for="">Email</label>
+                <span>Required*</span>
+              </div>
+              <div class="input-wrap">
+                <textarea required="" id="" cols="30" rows="10"></textarea>
+                <label for="">Message</label>
+                <span>Required*</span>
+              </div>
+              <button>Send Message</button>
+            </form>
+          </div>
+          <div class="contact__info">
+            <ul>
+              <li><i class="fas fa-envelope"></i>myblog@somwhere.com</li>
+              <li><i class="fas fa-mobile"></i>0909123123</li>
+              <li><i class="fas fa-map-marker-alt"></i>069 somewhere, near</li>
+            </ul>
           </div>
         </div>
       </div>
-    </section>
-
-    <article>
-      <div class="container">
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Necessitatibus id voluptatibus voluptatem, nulla minima dicta magnam
-          molestiae ipsum. Nesciunt iste vitae minima corrupti laboriosam
-          repudiandae, odio soluta aliquid eveniet obcaecati ex alias numquam
-          ipsa velit?
-        </p>
-        <figure>
-          <img src="https://via.placeholder.com/300x500" alt="" />
-          <figcaption>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam,
-            dolor! Blanditiis facilis et repudiandae placeat dolorem quaerat
-            dolore, sed omnis!
-          </figcaption>
-        </figure>
-
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt
-          aspernatur dignissimos repudiandae quod? Pariatur sapiente, cum
-          delectus et veniam eos nam soluta fugiat qui quae quas eaque voluptas
-          non laboriosam saepe harum praesentium, cupiditate repudiandae id sit
-          labore sed dignissimos! Suscipit labore, obcaecati ullam libero modi
-          nisi eum facilis magni.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, sunt
-          architecto. Sequi, soluta saepe praesentium animi quaerat, placeat
-          fugiat sed facilis dolores corrupti molestiae officia sapiente
-          voluptas eius labore. Excepturi sapiente non sunt. Obcaecati hic
-          consequatur blanditiis! Corrupti excepturi sed quis minus distinctio,
-          animi deserunt fuga dolorum, eum maxime facere, dolore eius. Ratione
-          dignissimos libero illo minus doloremque? Non, voluptatibus.
-        </p>
-      </div>
-    </article>
-
-    <section class="cta mb-5">
-      <div class="container">
-        <div class="cta__wrapper text-center">
-          <h3>Subscribe to get more</h3>
-          <p class="mb-2">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque
-            impedit velit asperiores aliquid nisi consectetur, vero, sapiente
-            non eligendi voluptatem est fugit cupiditate quas quaerat?
-          </p>
-          <ul>
-            <li><a href="#">Learn More</a></li>
-            <li><a href="#">Buy Now</a></li>
-          </ul>
-        </div>
-      </div>
-    </section>
+    </main>
 
     <footer class="footer">
       <div class="container">
@@ -173,12 +128,11 @@
         </div>
       </div>
     </footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
     <script>
       const toggleMenu = document.querySelector("#toggleMenu");
       const menu = document.querySelector("#menu");
       const body = document.querySelector("body");
+      const icon = document.querySelector(".far");
 
       toggleMenu.addEventListener("click", () => {
         menu.classList.toggle("open");
