@@ -15,11 +15,23 @@
     />
   </head>
   <body>
-    <header class="header">
+    <header class="header py-2 mb-3">
       <div class="container">
-        <div class="header__wrapper">
+        <div class="header__wrapper flex justify-between items-center">
           <a href="#">Studio</a>
-          <button><i class="fas fa-bars"></i></button>
+          <ul class="flex gap-2" id="menu">
+            <li>
+              <a href="./index.html">Home</a>
+              <a href="./single.html">Blog</a>
+              <a href="#">Podcasts</a>
+              <a href="#">Books</a>
+              <a href="#">About</a>
+            </li>
+          </ul>
+          <div class="flex gap-1">
+            <i class="fas fa-shopping-bag" id="toggleMenu"></i>
+            <i class="fas fa-user" id="toggleMenu"></i>
+          </div>
         </div>
       </div>
     </header>
@@ -331,6 +343,15 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
     <script>
+      const toggleMenu = document.querySelector("#toggleMenu");
+      const menu = document.querySelector("#menu");
+      const body = document.querySelector("body");
+
+      toggleMenu.addEventListener("click", () => {
+        menu.classList.toggle("open");
+        body.classList.toggle("open");
+      });
+
       var slider = tns({
         container: ".trending__slider",
         items: 1,
