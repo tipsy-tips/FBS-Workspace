@@ -1,2 +1,83 @@
 @use "../abstract/" as *;
 @use "../base/" as *;
+
+.footer {
+  background-color: #000815;
+  padding-top: 10rem;
+  &__wrapper {
+    @include mediaQuery {
+      flex-direction: column;
+    }
+    @include flex(space-between, center);
+    gap: 5rem;
+  }
+  &__form {
+    p {
+      font-size: 2rem;
+    }
+    ul {
+      @include mediaQuery {
+        justify-content: flex-start;
+      }
+      @include flex(center, center);
+      gap: 2rem;
+
+      a {
+        color: $clr-light;
+        font-size: 3rem;
+      }
+    }
+  }
+
+  &__links {
+    @include mediaQuery {
+      display: none;
+    }
+    @include flex;
+    gap: 15rem;
+    justify-self: flex-end;
+    li,
+    h4 {
+      text-align: left;
+      margin-bottom: 3rem;
+      font-size: 2rem;
+    }
+
+    li {
+      margin-bottom: 1.5rem;
+      font-size: 1.4rem;
+    }
+    a {
+      color: $clr-light;
+      font-size: 1.6rem;
+      font-weight: 100;
+    }
+    i {
+      margin-right: 1rem;
+      font-size: 2.5rem;
+    }
+    img {
+      @include imgCover(40px, 100%);
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__bottom {
+    border-top: 3px solid #323232;
+    padding: 1.5rem 0;
+    font-size: 1.2rem;
+    margin-top: 5rem;
+    @include flex(flex-start, center);
+    gap: 1rem;
+    align-content: center;
+    h4 {
+      margin-right: 2rem;
+    }
+    span {
+      margin: 0 1rem;
+    }
+    a {
+      color: $clr-light;
+    }
+  }
+}

@@ -6,9 +6,7 @@ $lg: "144rem";
 $xl: "180rem";
 
 @mixin roundedContainer($clr: $clr-light) {
-  max-width: 100%;
-  margin: awa 3rem;
-
+  margin: 3rem 2rem;
   background-color: $clr;
   border-radius: 10rem;
 }
@@ -20,7 +18,7 @@ $xl: "180rem";
 }
 
 @mixin mediaQuery($width: $sm) {
-  @media (min-width: $width) {
+  @media (max-width: $width) {
     @content;
   }
 }

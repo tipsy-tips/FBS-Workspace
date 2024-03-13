@@ -7,22 +7,12 @@
       visibility: visible;
       opacity: 1;
     }
-    ul {
-      @include mediaQuery {
-        position: static;
-        background-color: unset;
-        padding: unset;
-        width: auto;
-        height: unset;
-        visibility: visible;
-        opacity: 1;
-        li {
-          flex-direction: row !important;
-          a {
-            font-size: 2rem !important;
-          }
-        }
+    @include mediaQuery {
+      a {
+        display: none;
       }
+    }
+    ul {
       position: fixed;
       top: 6.5rem;
       left: 0;
@@ -38,14 +28,15 @@
       li {
         display: flex;
         flex-direction: column;
-        gap: 3rem;
+        gap: 5rem;
         text-align: center;
         a {
           font-size: 3rem;
+          font-weight: bold;
+          color: $clr-dark;
           &:hover {
-            border-bottom: 2px solid $clr-secondary;
+            border-bottom: 3px solid $clr-secondary;
             color: $clr-dark;
-            font-weight: bold;
           }
         }
       }

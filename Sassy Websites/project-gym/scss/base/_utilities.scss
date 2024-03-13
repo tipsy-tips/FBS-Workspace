@@ -3,6 +3,9 @@
 $colors: (
   "light": $clr-light,
   "dark": $clr-dark,
+  "primary": $clr-primary,
+  "secondary": $clr-secondary,
+  "accent": $clr-accent,
 );
 
 @each $key, $val in $colors {
@@ -36,12 +39,23 @@ $alignments: left, center, right, justify;
   .mt-#{$i} {
     margin-top: #{$i}rem;
   }
+  .ml-#{$i} {
+    margin-left: #{$i}rem;
+  }
+  .mr-#{$i} {
+    margin-right: #{$i}rem;
+  }
+
   .mx-#{$i} {
     margin: 0 #{$i}rem;
   }
 
   .p-#{$i} {
     padding: #{$i}rem;
+  }
+
+  .pt-#{$i} {
+    padding-top: #{$i}rem;
   }
 
   .py-#{$i} {
