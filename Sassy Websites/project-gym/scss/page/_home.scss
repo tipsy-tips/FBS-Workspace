@@ -109,7 +109,7 @@
   }
   &__card {
     @include roundedContainer($clr-accent);
-    border-radius: 3rem;
+    border-radius: 5rem;
     @include flex(space-between, center);
     @include mediaQuery {
       justify-content: center;
@@ -147,7 +147,7 @@
         }
       }
       img {
-        border-radius: 0 1rem 5rem 0;
+        border-radius: 0 5rem 5rem 0;
       }
     }
   }
@@ -234,7 +234,7 @@
             display: none;
           }
           font-size: 7rem;
-          margin-top: -4rem;
+
           opacity: 0.5;
         }
         p {
@@ -242,6 +242,7 @@
             margin-left: unset;
             margin-top: 2rem;
           }
+          margin-top: 2.5rem;
           margin-left: 2rem;
           font-size: 2rem;
           font-family: "Poppins";
