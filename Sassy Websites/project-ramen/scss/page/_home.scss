@@ -85,7 +85,7 @@
         @include mediaQuery {
           flex-direction: row;
         }
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: center;
       }
       .menu-item-img {
@@ -95,6 +95,7 @@
       }
       img {
         height: 220px;
+        transform: translateX(2rem);
       }
       h4 {
         font-family: "Economica", sans-serif;

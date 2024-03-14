@@ -522,7 +522,7 @@ p {
   letter-spacing: 0.2rem;
   border-radius: 0.5rem;
   background-color: var(--accent);
-  font-size: clamp(1rem, 6vw, 1.8rem);
+  font-size: clamp(1rem, 2vw, 1.8rem);
   padding: 0.8rem 3rem;
   transition: 0.5s ease;
 }
@@ -719,7 +719,7 @@ p {
   padding: 5rem 0;
 }
 .menu__wrapper .menu-item .menu-item-flex {
-  flex-direction: column;
+  flex-direction: column-reverse;
   justify-content: center;
 }
 @media (min-width: 42rem) {
@@ -734,6 +734,7 @@ p {
 }
 .menu__wrapper .menu-item img {
   height: 220px;
+  transform: translateX(2rem);
 }
 .menu__wrapper .menu-item h4 {
   font-family: "Economica", sans-serif;
