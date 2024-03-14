@@ -13,6 +13,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <!-- BODY START -->
@@ -52,7 +53,12 @@
       </section>
     </div>
 
-    <section class="instruction">
+    <section
+      data-aos="slide-right"
+      data-aos-duration="1000"
+      data-aos-delay="500"
+      class="instruction"
+    >
       <div class="container">
         <div class="block__header">
           <h2>HOW TO ORDER AT MICHI</h2>
@@ -76,7 +82,11 @@
       </div>
     </section>
 
-    <section class="menu">
+    <section
+      data-aos="flip-down"
+      data-aos-duration="1000"
+      class="menu"
+    >
       <div class="container">
         <div class="menu__wrapper text-center">
           <h1 class="text-center text-light">Ramen Menu</h1>
@@ -262,7 +272,12 @@
       </div>
     </section>
 
-    <section class="schedule">
+    <section
+      data-aos="flip-up"
+      data-aos-duration="2000"
+      data-aos-delay="500"
+      class="schedule"
+    >
       <div class="container">
         <div class="schedule__wrapper">
           <h2>JOIN US FOR HAPPY HOUR</h2>
@@ -305,6 +320,10 @@
     </footer>
 
     <!-- BODY END -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
     <script>
       const toggleMenu = document.querySelector("#toggleMenu");
@@ -323,6 +342,8 @@
         autoplay: false,
         autoplayButtonOutput: false,
         nav: false,
+        rewind: true,
+        touch: true,
 
         controlsText: [
           '<i class="fas fa-arrow-left-long"></i>',
