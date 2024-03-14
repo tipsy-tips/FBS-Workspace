@@ -1,0 +1,11 @@
+@use "../abstract/" as *;
+
+.block__header {
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  text-align: center;
+  h2 {
+    font-size: clamp(2.5rem, 6vw, 3rem);
+    color: $clr-secondary;
+  }
+}

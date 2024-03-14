@@ -1,33 +1,33 @@
 @use "../abstract/" as *;
 
-// .header {
-//   .header__wrapper {
-//     ul {
-//       li {
-//         a {
-//           margin: 0 1rem;
-//           font-weight: 700;
-//           &:hover {
-//             color: $clr-accent;
-//           }
-//         }
-//       }
-//     }
-//     .navMenu {
-//       background-color: $clr-accent;
-//       span {
-//         display: block;
-//         width: 4rem;
-//         height: 0.2rem;
-//         background-color: $clr-white;
-//         margin-bottom: 0.3rem;
-//         .half {
-//           width: 0rem;
-//         }
-//       }
-//     }
-//   }
-// }
+.header {
+  .header__wrapper {
+    ul {
+      li {
+        a {
+          margin: 0 1rem;
+          font-weight: 700;
+          &:hover {
+            color: $clr-accent;
+          }
+        }
+      }
+    }
+    .navMenu {
+      background-color: $clr-accent;
+      span {
+        display: block;
+        width: 4rem;
+        height: 0.2rem;
+        background-color: $clr-white;
+        margin-bottom: 0.3rem;
+        .half {
+          width: 0rem;
+        }
+      }
+    }
+  }
+}
 
 .header {
   &__wrapper {
