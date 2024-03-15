@@ -1,0 +1,56 @@
+@use "colors" as *;
+
+$sm: "42rem";
+$md: "92rem";
+$lg: "144rem";
+$xl: "180rem";
+
+@mixin imgCover($ht: 1px, $wd: 100%) {
+  height: $ht;
+  width: $wd;
+  object-fit: cover;
+}
+
+@mixin mediaQuery($width: $sm) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+// GRID
+@mixin grid($cols: 1, $gap: 1rem) {
+  display: grid;
+  grid-template-columns: repeat($cols, 1fr);
+  grid-gap: $gap;
+}
+
+@mixin unevenGrid($val, $gap: 1rem) {
+  display: grid;
+  grid-template-columns: $val;
+  grid-gap: $gap;
+}
+
+@mixin absolute($top: 0, $right: 0, $bottom: 0, $left: 0) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  bottom: $bottom;
+  right: $right;
+}
+
+@mixin flex($justify: flex-start, $align: flex-start) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin button_styles($clr, $border-radius) {
+  outline: none;
+  border: none;
+  font-size: 2rem;
+  padding: 1.5rem 4rem;
+  font-weight: 600;
+  clr: $clr;
+  color: white;
+  border-radius: $border-radius;
+}

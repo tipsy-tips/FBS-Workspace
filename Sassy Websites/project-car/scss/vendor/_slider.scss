@@ -1,0 +1,44 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.tns-controls {
+  @include flex(flex-end, flex-start);
+  margin-bottom: 1rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba($color: #fff, $alpha: 0.5);
+  button {
+    margin: 0 1rem;
+    color: $clr-light;
+    background-color: transparent;
+    border: none;
+    font-size: 3rem;
+    &:hover {
+      color: $clr-dark;
+    }
+  }
+}
+
+.tns-outer {
+  position: relative;
+  .tns-nav {
+    z-index: 999;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 2rem;
+    transform: translate(-50%);
+
+    button {
+      margin: 0 0.6rem;
+      width: 15px;
+      height: 15px;
+      border-radius: 100%;
+      border: none;
+      background-color: $clr-accent;
+    }
+
+    & button.tns-nav-active {
+      background-color: $clr-light;
+    }
+  }
+}
