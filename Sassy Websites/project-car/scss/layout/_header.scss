@@ -53,6 +53,7 @@
         flex-direction: column;
         gap: 4rem;
         text-align: center;
+        
         letter-spacing: 0.2rem;
         a {
           @include mediaQuery {
