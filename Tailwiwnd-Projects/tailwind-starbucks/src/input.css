@@ -7,7 +7,8 @@
 }
 
 @layer components {
-  /* HEADER!!!!!! */
+  /* !~~~~~~~~~~ HEADER ~~~~~~~~~~! */
+
   .header {
     @apply bg-light 
     shadow-md 
@@ -17,7 +18,7 @@
     @apply flex items-center justify-between;
   }
 
-  /* BRANDING!!!!! */
+  /* !~~~~~~~~~~ BRANDING ~~~~~~~~~~! */
   .branding {
     @apply md:flex items-center gap-8;
   }
@@ -34,7 +35,7 @@
     @apply font-medium text-xl text-dark hover:text-primary;
   }
 
-  /* ACTION!!!!!!! */
+  /* !~~~~~~~~~~ ACTION ~~~~~~~~~~! */
   .header__action {
     @apply bg-light 
     absolute
@@ -86,7 +87,7 @@
     @apply flex gap-5;
   }
 
-  /* BURGER MENU!!!!!!!! */
+  /* !~~~~~~~~~~ BURGER ~~~~~~~~~~! */
   .burger__menu {
     @apply md:hidden;
   }
@@ -111,7 +112,7 @@
     @apply transform translate-y-[0px] rotate-[-225deg] transition-all;
   }
 
-  /* BANNERS */
+  /* !~~~~~~~~~~ BANNERS ~~~~~~~~~~! */
 
   .banner {
     @apply md:max-w-[1600px] mx-auto py-10;
@@ -136,22 +137,234 @@
     @apply px-10 py-5 flex flex-col items-center gap-4;
   }
   .banner__card--content h2 {
-    @apply text-center text-[1.2rem] font-bold lg:text-[3rem] lg:text-[#1e3932];
+    @apply text-center text-[1.2rem] font-bold lg:text-[3rem] text-[#1e3932];
   }
   .banner__card--content p {
     @apply text-center text-[1rem] lg:text-[1.5rem];
   }
   .banner__card--content a {
   }
-}
 
-/* .servicesBanner div:nth-child(odd) {
-    flex-direction: row-reverse;
+  /* !~~~~~~~~~~ LINKS ~~~~~~~~~~! */
+
+  .links {
+    @apply p-6
+    border-t-2;
   }
-  
-  .servicesBanner .servicesBanner__content:nth-child(odd) {
-    background-color: var(--clr-semilight);
-  } */
+
+  .links__wrapper {
+    @apply grid grid-cols-1 gap-10
+    md:grid md:grid-cols-6;
+  }
+
+  .links__item ul {
+    @apply max-h-[0]
+    overflow-hidden
+    transition-all
+    flex
+    flex-col
+    gap-6
+    md:max-h-[100%] md:pt-6;
+  }
+
+  .links__item ul.open {
+    @apply max-h-[100%] pt-6 transition-all;
+  }
+
+  .links__item ul li a {
+    @apply text-gray-500 font-semibold hover:text-dark;
+  }
+
+  .links__item h4 {
+    @apply flex
+    items-center
+    justify-between
+    font-semibold
+    hover:cursor-pointer;
+  }
+
+  .links__item h4 i {
+  }
+
+  .links__item h4 i.open {
+    @apply transform rotate-90 transition-all;
+  }
+
+  .links__item i {
+    @apply transition-all md:hidden;
+  }
+
+  /* !~~~~~~~~~~ FOOTER ~~~~~~~~~~! */
+
+  .footer {
+  }
+
+  .footer__wrapper {
+    @apply pt-5 border-t-2 flex flex-col gap-5;
+  }
+
+  .footer__links ul {
+    @apply flex flex-col 
+    gap-4
+    md:flex 
+    md:flex-row 
+    md:items-center;
+  }
+
+  .footer__links ul li {
+    @apply font-semibold
+    hover:underline 
+    md:inline-block md:border-r-2 
+  md:border-gray-500 
+    md:px-6 
+    md:text-center 
+     
+    md:mr-[-16px];
+  }
+
+  .footer__links ul li:first-child {
+    @apply md:pl-0;
+  }
+
+  .footer__links ul li:last-child {
+    @apply md:border-r-0 md:pr-0;
+  }
+
+  .footer__socials ul {
+    @apply flex gap-4 my-3;
+  }
+
+  .footer__copyright h3 {
+    @apply text-xs font-bold text-gray-500;
+  }
+
+  /* !~~~~~~~~~~ REWARD BANNER ~~~~~~~~~~! */
+
+  .rBanner {
+    @apply bg-starBannerM 
+    h-[600px] 
+    bg-cover 
+    bg-secondary
+    bg-right-bottom
+    flex
+    text-center
+    md:text-left
+    md:items-center
+    md:bg-starBanner
+    md:bg-left;
+  }
+
+  .banner-desktop {
+    @apply hidden
+    md:block;
+  }
+
+  .banner-mobile {
+    @apply md:hidden;
+  }
+
+  .coffee__nav {
+    @apply bg-[#f1f7f5];
+  }
+  .coffee__nav h4 {
+    @apply text-2xl 
+    font-semibold
+    text-center;
+  }
+  .coffee__nav ul {
+    @apply flex
+    items-center
+    justify-center
+    mt-6;
+  }
+
+  .coffee__nav ul li {
+    @apply px-3 pb-2 border-b-4 border-transparent;
+  }
+
+  .coffee__nav ul li.active {
+    @apply border-b-4
+    border-primary;
+  }
+
+  .coffee__nav ul li a {
+    @apply text-lg font-semibold;
+  }
+
+  .coffee__tab {
+    @apply bg-[#d4e9e2] 
+    relative
+    h-[450px] 
+    md:h-[300px];
+  }
+  .coffee__item {
+    @apply absolute 
+    opacity-0 
+    transition-all
+    md:top-10
+    md:grid
+    md:grid-cols-[_2fr,_2fr]
+    md:max-w-[50rem]
+    md:items-center
+    md:left-[20%];
+  }
+
+  .coffee__text {
+    @apply flex 
+    flex-col 
+    gap-4
+    mt-4
+    px-5
+    py-5;
+  }
+  .coffee__text h5 {
+    @apply text-xl
+    font-semibold
+    text-center;
+  }
+
+  .coffee__text p {
+    @apply text-center;
+  }
+  .coffee__item.active {
+    @apply opacity-100 transition-all;
+  }
+
+  /* !~~~~~~~~~~ GETTING STARTED BANNER ~~~~~~~~~~! */
+
+  .start__title {
+    @apply flex flex-col gap-2 text-center;
+  }
+
+  .start__wrapper {
+    @apply flex flex-col gap-5;
+  }
+
+  .start__cards {
+    @apply md:grid 
+    md:grid-cols-3;
+  }
+
+  .start__steps {
+    @apply flex
+    gap-5
+    mb-5
+    md:flex-col;
+  }
+
+  .step {
+    @apply border-2 min-w-[40px] h-[40px] border-primary text-center rounded-full mx-auto
+    md:w-[40px];
+  }
+
+  .start__content {
+    @apply md:text-center md:px-10;
+  }
+
+  .step h1 {
+    @apply font-semibold text-2xl;
+  }
+}
 
 @layer utilities {
   .btn {
@@ -162,9 +375,9 @@
     border-transparent
     border-[1]
     text-sm
-    font-medium
-    scale-[.9] 
-    hover:scale-[1];
+    font-bold
+    scale-[1] 
+    hover:scale-[1.1];
   }
   .btn.bg--dark {
     @apply bg-dark
@@ -174,6 +387,16 @@
     @apply bg-transparent
     text-dark
     border-dark
+    border-[1px];
+  }
+  .btn.bg--outline {
+    @apply bg-transparent
+    text-light
+    border-light
+    border-[1px];
+  }
+  .btn.bg--transparent {
+    @apply bg-transparent
     border-[1px];
   }
 }
