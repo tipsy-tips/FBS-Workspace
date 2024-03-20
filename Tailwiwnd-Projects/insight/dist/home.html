@@ -15,16 +15,20 @@
     <header class="header__banner">
       <div class="container">
         <div class="header__wrapper">
-          <div class="branding">
+          <nav id="branding"
+            class="branding md:flex md:w-full md:justify-between md:items-center"
+          >
             <a href="./home.html"><img src="./img/logo.png" alt="" /></a>
-            <ul class="header__navd hidden">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Projects</a></li>
-              <li><a href="#">Contacts</a></li>
+            <ul
+              class="header__navd hidden md:block md:flex md:gap-5 md:text-light md:font-semibold"
+            >
+              <li class="md:hover:text-secondary md:hover:underline"><a href="#">Home</a></li>
+              <li class="md:hover:text-secondary md:hover:underline"><a href="#">Services</a></li>
+              <li class="md:hover:text-secondary md:hover:underline"><a href="#">Projects</a></li>
+              <li class="md:hover:text-secondary md:hover:underline"><a href="#">Contacts</a></li>
             </ul>
-          </div>
-          <div class="header__action">
+          </nav>
+          <div class="header__action md:hidden">
             <div class="header__navm mt-28 flex flex-col gap-10 items-center">
               <ul class="text-center">
                 <li
@@ -75,37 +79,51 @@
             <span class=""></span>
           </div>
         </div>
-        <div class="banner__wrapper my-6 flex flex-col gap-5 items-center">
-          <h1 class="mb-5 text-light text-[2.4rem] text-center">
+        </div>
+
+        <div class="banner__wrapper my-6 flex flex-col gap-5 mt-20">
+          <h1 class="mb-5 text-light text-[2.4rem] text-center md:text-[4rem]">
             Turning Your House <br />
             Into A Home
           </h1>
-          <a
-            href="#"
-            class="btn bg--outline w-10/12 text-[1.2rem] text-center p-[1rem]"
-            >See Projects</a
+          <ul
+            class="flex flex-col items-center gap-5 md:flex-row md:justify-center"
           >
-          <a
-            href="#"
-            class="btn bg--secondary w-10/12 text-[1.2rem] text-center p-[1rem]"
-            >Inquire</a
-          >
+            <li>
+              <a
+                href="#"
+                class="btn bg--outline !rounded-full w-[20rem] text-[1.2rem] text-center p-[1rem] md:w-[15rem]"
+                >See Projects</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="btn bg--secondary !rounded-full w-[20rem] text-[1.2rem] text-center p-[1rem] md:w-[15rem]"
+                >Inquire</a
+              >
+            </li>
+          </ul>
         </div>
       </div>
     </header>
 
-    <section class="services">
+    <section class="services mb-20">
       <div class="container">
-        <div class="services__wrapper flex flex-col gap-10 my-5">
-          <div class="services__title my-10 flex flex-col gap-1 items-center">
-            <h1 class="text-[3rem] font-bold text-secondary">Services</h1>
-            <h2 class="text-gray-900 text-center font-semibold">
-              Lorem ipsum dolor sit amet consectetur adipisicing
-            </h2>
-          </div>
+        <div
+          class="services__title my-10 flex flex-col gap-1 items-center md:items-start"
+        >
+          <h1 class="text-[3rem] font-bold text-secondary">Services</h1>
+          <h2 class="text-gray-900 text-center font-semibold">
+            Lorem ipsum dolor sit amet consectetur adipisicing
+          </h2>
+        </div>
+        <div
+          class="services__wrapper flex flex-col gap-10 my-5 md:grid md:grid-cols-1 lg:grid lg:grid-cols-3"
+        >
           <div class="services__card">
             <div
-              class="card-wrapper shadow-[0_8px_30px_rgb(0,0,0,0.12)] border-2 rounded-2xl"
+              class="card-wrapper shadow-[0_8px_30px_rgb(0,0,0,0.12)] border-2 rounded-2xl hover:scale-105 transition-all duration-700"
             >
               <div
                 class="card-content pl-10 pr-10 pt-10 flex flex-col gap-5 items-center"
@@ -117,7 +135,7 @@
                   incidunt nisi blanditiis ducimus.
                 </p>
                 <ul
-                  class="flex flex-col gap-3 w-full ml-14 text-gray-900 list-square"
+                  class="flex flex-col gap-3 w-full ml-14 text-gray-900 list-square md:grid md:grid-cols-2 lg:grid-cols-1 lg:ml-0"
                 >
                   <li>Lorem ipsum dolor sit amet.</li>
                   <li>Lorem ipsum dolor sit amet.</li>
@@ -134,7 +152,7 @@
           </div>
           <div class="services__card">
             <div
-              class="card-wrapper shadow-[0_8px_30px_rgb(0,0,0,0.12)] border-2 rounded-2xl"
+              class="card-wrapper shadow-[0_8px_30px_rgb(0,0,0,0.12)] border-2 rounded-2xl hover:scale-105 transition-all duration-700"
             >
               <div
                 class="card-content pl-10 pr-10 pt-10 flex flex-col gap-5 items-center"
@@ -146,7 +164,7 @@
                   incidunt nisi blanditiis ducimus.
                 </p>
                 <ul
-                  class="flex flex-col gap-3 w-full ml-14 text-gray-900 list-square"
+                  class="flex flex-col gap-3 w-full ml-14 text-gray-900 list-square md:grid md:grid-cols-2 lg:grid-cols-1 lg:ml-0"
                 >
                   <li>Lorem ipsum dolor sit amet.</li>
                   <li>Lorem ipsum dolor sit amet.</li>
@@ -163,7 +181,7 @@
           </div>
           <div class="services__card">
             <div
-              class="card-wrapper shadow-[0_8px_30px_rgb(0,0,0,0.12)] border-2 rounded-2xl"
+              class="card-wrapper shadow-[0_8px_30px_rgb(0,0,0,0.12)] border-2 rounded-2xl hover:scale-105 transition-all duration-700"
             >
               <div
                 class="card-content pl-10 pr-10 pt-10 flex flex-col gap-5 items-center"
@@ -175,7 +193,7 @@
                   incidunt nisi blanditiis ducimus.
                 </p>
                 <ul
-                  class="flex flex-col gap-3 w-full ml-14 text-gray-900 list-square"
+                  class="flex flex-col gap-3 w-full ml-14 text-gray-900 list-square md:grid md:grid-cols-2 lg:grid-cols-1 lg:ml-0"
                 >
                   <li>Lorem ipsum dolor sit amet.</li>
                   <li>Lorem ipsum dolor sit amet.</li>
@@ -195,13 +213,13 @@
     </section>
 
     <section class="projects">
-      <div class="projects__wrapper flex flex-col gap-10">
-        <div class="project-1 bg-project1 bg-cover h-[500px]">
+      <div class="projects__wrapper flex flex-col gap-10 md:flex-row md:gap-0">
+        <div class="project bg-project1 bg-cover h-[500px]">
           <div
             class="project-content h-[500px] flex justify-center items-center"
           >
             <div
-              class="content text-light max-w-[90%] mx-auto bg-black/50 flex flex-col gap-5 items-center p-10"
+              class="content text-light w-[90%] mx-auto bg-black/50 flex flex-col gap-5 items-center p-10"
             >
               <h1 class="font-bold text-[1.6rem]">Kitchen</h1>
               <p>
@@ -216,12 +234,12 @@
             </div>
           </div>
         </div>
-        <div class="project-2 bg-project2 bg-cover h-[500px]">
+        <div class="project bg-project2 bg-cover h-[500px]">
           <div
             class="project-content h-[500px] flex justify-center items-center"
           >
             <div
-              class="content text-light max-w-[90%] mx-auto bg-black/50 flex flex-col gap-5 items-center p-10"
+              class="content text-light w-[90%] mx-auto bg-black/50 flex flex-col gap-5 items-center p-10"
             >
               <h1 class="font-bold text-[1.6rem]">Bathroom</h1>
               <p>
@@ -236,12 +254,12 @@
             </div>
           </div>
         </div>
-        <div class="project-3 bg-project3 bg-cover h-[500px]">
+        <div class="project bg-project3 bg-cover h-[500px]">
           <div
             class="project-content h-[500px] flex justify-center items-center"
           >
             <div
-              class="content text-light max-w-[90%] mx-auto bg-black/50 flex flex-col gap-5 items-center p-10"
+              class="content text-light w-[90%] mx-auto bg-black/50 flex flex-col gap-5 items-center p-10"
             >
               <h1 class="font-bold text-[1.6rem]">Living Room</h1>
               <p>
@@ -261,16 +279,18 @@
 
     <section class="contacts">
       <div class="container">
-        <div class="contacts__wrapper">
-          <div class="contacts__title my-10 flex flex-col gap-1 items-center">
+        <div class="contacts__wrapper md:mb-[-70px] z-10">
+          <div class="contacts__title my-10 flex flex-col gap-1 items-center md:items-start">
             <h1 class="text-[3rem] font-bold text-secondary">Contacts</h1>
             <h2 class="text-gray-900 text-center font-semibold">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Voluptates, omis!
             </h2>
           </div>
-          <div class="contacts__content">
-            <div class="contact__info flex flex-col gap-5">
+          <div
+            class="contacts__content md:flex md:flex-row-reverse md:justify-between md:gap-10"
+          >
+            <div class="contact__info w-[50%] flex flex-col gap-5">
               <div class="contact-card flex items-center gap-5">
                 <i class="fa-solid fa-map-pin text-secondary"></i>
                 <p>Baloc Road, Brgy. San Ignacio, San Pablo City, Laguna</p>
@@ -285,30 +305,30 @@
               </div>
             </div>
             <div
-              class="contact__form my-10 border-2 rounded-md p-5 shadow-[0_8px_30px_rgb(0,0,0,0.12)]"
+              class="contact__form my-10 border-2 rounded-md p-5 shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-light md:my-0 md:w-[600px]"
             >
-              <form action="" class="flex flex-col gap-3">
+              <form action="" class="flex flex-col gap-3 w-[100%]">
                 <input
                   type="text"
                   name=""
                   id=""
                   placeholder="Name"
-                  class="border-2 rounded-md pl-2 py-2"
+                  class="border-2 rounded-md pl-2 py-2  outline-none focus:border-dark transition-all duration-500"
                 />
                 <input
                   type="text"
                   name=""
                   id=""
                   placeholder="Email"
-                  class="border-2 rounded-md pl-2 py-2"
+                  class="border-2 rounded-md pl-2 py-2  outline-none focus:border-dark transition-all duration-500" 
                 />
                 <textarea
-                  name=""
+                  name="textarea"
                   id=""
                   cols="30"
                   rows="10"
                   placeholder="Message..."
-                  class="border-2 rounded-md pl-2 py-2"
+                  class="border-2 rounded-md pl-2 py-2 outline-none focus:border-dark transition-all duration-500"
                 ></textarea>
               </form>
               <div class="w-full flex justify-end">

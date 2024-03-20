@@ -2,11 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+h1,
+h2,
+h3,
+p,
+a,
+img,
+ul,
+li,
+i,
+input,
+form {
+  @apply hover:animate-spin;
+}
+
 /* !~~~~~~~~~~ HEADER ~~~~~~~~~~! */
 .header__banner {
   @apply bg-banner
      bg-cover
-     h-[570px];
+     h-[700px]
+     md:h-[100vh];
 }
 .header__wrapper {
   @apply flex items-center justify-between;
@@ -23,6 +38,7 @@
     h-[100vh]
     px-0
     pt-0
+    duration-300
     overflow-hidden
     transition-all
     shadow-md
@@ -36,7 +52,8 @@
   @apply w-[100%] 
     px-10 
     pt-10 
-    transition-all;
+    transition-all
+    duration-300;
 }
 
 /* !~~~~~~~~~~ Branding ~~~~~~~~~~! */
@@ -59,7 +76,7 @@
 }
 
 .burger__menu span {
-  @apply w-[1rem] h-[.4rem] bg-light block rounded-full transition-all;
+  @apply w-[1rem] h-[.4rem] bg-light block rounded-full transition-all duration-700;
 }
 
 .burger__menu span:nth-child(1) {
@@ -73,24 +90,21 @@
 }
 
 .burger__menu.open span:first-child {
-  @apply transform translate-y-[10px] rotate-[225deg] transition-all w-[2rem];
+  @apply transform translate-y-[10px] rotate-[225deg] transition-all w-[2rem] duration-700;
 }
 
 .burger__menu.open span:nth-child(2) {
-  @apply opacity-0 transition-all w-[1.3rem];
+  @apply opacity-0 transition-all w-[1.3rem] duration-700;
 }
 
 .burger__menu.open span:last-child {
-  @apply transform translate-y-[-9px] rotate-[-225deg] transition-all;
+  @apply transform translate-y-[-9px] rotate-[-225deg] transition-all duration-700;
 }
 
 @layer base {
   .container {
-    @apply max-w-[90rem] p-[2.75rem] w-full mx-auto;
+    @apply max-w-[90rem] p-[2rem]  w-full mx-auto;
   }
-}
-
-@layer components {
 }
 
 @layer utilities {
@@ -101,6 +115,8 @@
       border-transparent
       border-[1]
       font-bold
+      transition-all
+      duration-500
       scale-[1] 
       hover:scale-[1.1];
   }
