@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* !~~~~~~~~~~ HEADER ~~~~~~~~~~! */
+.header__banner {
+  @apply bg-banner
+     bg-cover
+     h-[570px];
+}
+.header__wrapper {
+  @apply flex items-center justify-between;
+}
+
+/* !~~~~~~~~~~ ACTION ~~~~~~~~~~! */
+.header__action {
+  @apply bg-dark 
+    absolute
+    z-10 
+    top-0
+    right-0 
+    w-[0]
+    h-[100vh]
+    px-0
+    pt-0
+    overflow-hidden
+    transition-all
+    shadow-md
+    md:static
+    md:h-fit
+    md:w-fit
+    md:shadow-none;
+}
+
+.header__action.open {
+  @apply w-[100%] 
+    px-10 
+    pt-10 
+    transition-all;
+}
+
+/* !~~~~~~~~~~ Branding ~~~~~~~~~~! */
+
+.branding img {
+  @apply w-[6rem];
+}
+
+/* !~~~~~~~~~~ BURGER ~~~~~~~~~~! */
+.burger__menu {
+  @apply rotate-180 md:hidden;
+}
+
+.burger__menu.open {
+  @apply z-50;
+}
+
+.burger__menu.open span {
+  @apply bg-light;
+}
+
+.burger__menu span {
+  @apply w-[1rem] h-[.4rem] bg-light block rounded-full transition-all;
+}
+
+.burger__menu span:nth-child(1) {
+  @apply w-[1.3rem];
+}
+.burger__menu span:nth-child(2) {
+  @apply my-[.2rem] w-[1.5rem];
+}
+.burger__menu span:nth-child(3) {
+  @apply my-[.2rem]  w-[2rem];
+}
+
+.burger__menu.open span:first-child {
+  @apply transform translate-y-[10px] rotate-[225deg] transition-all w-[2rem];
+}
+
+.burger__menu.open span:nth-child(2) {
+  @apply opacity-0 transition-all w-[1.3rem];
+}
+
+.burger__menu.open span:last-child {
+  @apply transform translate-y-[-9px] rotate-[-225deg] transition-all;
+}
+
+@layer base {
+  .container {
+    @apply max-w-[90rem] p-[2.75rem] w-full mx-auto;
+  }
+}
+
+@layer components {
+}
+
+@layer utilities {
+  .btn {
+    @apply inline-block
+      px-[1rem]
+      rounded-2xl
+      border-transparent
+      border-[1]
+      font-bold
+      scale-[1] 
+      hover:scale-[1.1];
+  }
+  .btn.bg--secondary {
+    @apply bg-secondary
+      text-light;
+  }
+  .btn.bg--light {
+    @apply bg-transparent
+      text-dark
+      border-dark
+      border-[1px];
+  }
+  .btn.bg--outline {
+    @apply bg-transparent
+      text-light
+      border-light
+      border-[1px];
+  }
+  .btn.bg--transparent {
+    @apply bg-transparent
+      border-[1px];
+  }
+}
