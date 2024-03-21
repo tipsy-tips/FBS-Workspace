@@ -29,6 +29,10 @@
     @apply sm/lg:~text-[1rem]/[1.2rem];
   }
 
+  .active-menu {
+    @apply underline text-[#28941e];
+  }
+
   /* !~~~~~~~~~~ BURGER ~~~~~~~~~~! */
   .burger__menu {
     @apply lg:hidden;
