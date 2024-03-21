@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-h1,
+/* h1,
 h2,
 h3,
 p,
@@ -13,8 +13,8 @@ li,
 i,
 input,
 form {
-  @apply hover:animate-spin;
-}
+  @apply animate-spin;
+} */
 
 /* !~~~~~~~~~~ HEADER ~~~~~~~~~~! */
 .header__banner {
@@ -99,6 +99,23 @@ form {
 
 .burger__menu.open span:last-child {
   @apply transform translate-y-[-9px] rotate-[-225deg] transition-all duration-700;
+}
+
+.project-content::after {
+  @apply absolute top-0 left-0
+  content-['']
+  w-full h-full
+  bg-black/60
+  transition-all;
+}
+.project-content:hover::after {
+  @apply scale-0;
+}
+.content {
+  @apply opacity-0
+  hover:opacity-100
+  transition-all
+  duration-700;
 }
 
 @layer base {
