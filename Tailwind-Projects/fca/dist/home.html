@@ -7,6 +7,10 @@
     <title>FCA - FAQs</title>
     <link rel="shortcut icon" href="./img/logo.png" />
     <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
@@ -14,80 +18,107 @@
   <body>
     <header>
       <div class="container">
-        <div class="header__wrapper">
-          <div
-            class="branding flex justify-between items-center border-b-[1.5px] border-dark"
-          >
-            <a href="#"
-              ><img src="./img/fca-logo.webp" class="h-[95px] py-2" alt=""
-            /></a>
-            <div class="burger__menu lg:hidden">
-              <span
-                class="w-[2.5rem] h-[.3rem] bg-dark block transition-all duration-700"
-              ></span>
-              <span
-                class="my-[.2rem] w-[2.5rem] h-[.3rem] bg-dark block transition-all duration-700"
-              ></span>
-              <span
-                class="w-[2.5rem] h-[.3rem] bg-dark block transition-all duration-700"
-              ></span>
-            </div>
+        <div class="border-b border-black flex items-center justify-between">
+          <a href="#"
+            ><img src="./img/fca-logo.webp" alt="" class="w-[200px]"
+          /></a>
+          <div class="hidden lg:block">
+            <ul class="font-raleway flex items-center">
+              <li class="mx-2">
+                <i class="fa-solid fa-phone"></i>
+                (049) 521-0732
+              </li>
+              <li class="mx-2">
+                <i class="fa-solid fa-mobile-retro"></i>
+                (+63) 908-202-0749 | (+63) 926-363-9722
+              </li>
+              <li class="mx-2">
+                <a
+                  href="#"
+                  class="btn text-light px-10 py-2 rounded-md bg-[#3b5897] hover:bg-[#1573e5]"
+                  >Facebook</a
+                >
+              </li>
+              <li class="mx-2">
+                <a
+                  href="#"
+                  class="text-light px-5 py-2 rounded-md bg-[#daa625] hover:bg-[#28941e] border-2 border-dark border-[1px]"
+                  >FAQ's</a
+                >
+              </li>
+            </ul>
           </div>
-          <div class="header__action md:hidden">
-            <div class="header__navm mt-28 flex flex-col gap-10 items-center">
-              <ul class="text-center">
-                <li
-                  class="p-5 font-bold text-3xl text-light hover:bg-light hover:text-secondary transition-all duration-700"
-                >
-                  <a href="#">Home</a>
-                </li>
-                <li
-                  class="p-5 font-bold text-3xl text-light hover:bg-light hover:text-secondary transition-all duration-700"
-                >
-                  <a href="#">Services</a>
-                </li>
-                <li
-                  class="p-5 font-bold text-3xl text-light hover:bg-light hover:text-secondary transition-all duration-700"
-                >
-                  <a href="#">Projects</a>
-                </li>
-                <li
-                  class="p-5 font-bold text-3xl text-light hover:bg-light hover:text-secondary transition-all duration-700"
-                >
-                  <a href="#">Contacts</a>
-                </li>
-              </ul>
-
-              <ul class="text-light mb-10 flex text-[1.6rem]">
-                <a href="#"
-                  ><i
-                    class="fa-solid fa-envelope p-5 hover:bg-light hover:text-yellow-400"
-                  ></i
-                ></a>
-                <a href="#"
-                  ><i
-                    class="fa-brands fa-twitter p-5 hover:bg-light hover:text-blue-400"
-                  ></i
-                ></a>
-                <a href="#"
-                  ><i
-                    class="fa-brands fa-facebook-f p-5 hover:bg-light hover:text-blue-700"
-                  ></i
-                ></a>
-              </ul>
-              <a href="./home.html"><img src="./img/logo.png" alt="" /></a>
-            </div>
+          <div class="burger__menu lg:hidden cursor-pointer duration-500">
+            <span class="w-[40px] bg-dark h-1.5 block m-0.5"></span>
+            <span class="w-[40px] bg-dark h-1.5 block m-0.5"></span>
+            <span class="w-[40px] bg-dark h-1.5 block m-0.5"></span>
           </div>
         </div>
+
+        <nav>
+          <ul
+            class="flex flex-col gap-3 font-extralight text-[1.2rem] items-center lg:flex lg:flex-row lg:justify-between lg:mt-3 uppercase"
+          >
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Admission</a>
+            </li>
+            <li>
+              <a href="#">Services</a>
+            </li>
+            <li>
+              <a href="#">Gallery</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="btn text-light px-10 py-2 rounded-md bg-[#daa625]"
+                >Give</a
+              >
+            </li>
+          </ul>
+          <div class="lg:hidden">
+            <ul class="font-raleway block items-center text-center">
+              <li class="my-3">
+                <i class="fa-solid fa-phone"></i>
+                (049) 521-0732
+              </li>
+              <li class="my-3">
+                <i class="fa-solid fa-mobile-retro"></i>
+                (+63) 908-202-0749 | (+63) 926-363-9722
+              </li>
+              <li class="my-3">
+                <a
+                  href="#"
+                  class="btn text-light px-10 py-2 rounded-md bg-[#3b5897] hover:bg-[#1573e5]"
+                  >Facebook</a
+                >
+              </li>
+              <li class="my-3">
+                <a
+                  href="#"
+                  class="text-light px-10 py-2 rounded-md bg-[#daa625] hover:bg-[#28941e] border-2 border-dark border-[1px]"
+                  >FAQ's</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
     </header>
 
     <section class="faq my-[40px]">
       <div class="container">
         <div class="faq__title">
-          <h1
-            class="text-center ~sm/lg:~text-[2.5rem]/[4.5rem] font-extralight"
-          >
+          <h1 class="text-center ~sm/lg:~text-[2.5rem]/[4.5rem] font-thin">
             Frequently Asked Questions
           </h1>
         </div>
