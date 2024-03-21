@@ -6,7 +6,7 @@
 
 @layer components {
   nav {
-    @apply absolute top-[85px] z-10 bg-white h-screen lg:h-auto -right-[100%] lg:right-0 w-full lg:block lg:static ease-in-out duration-500 transition-all;
+    @apply absolute top-[100px] z-10 bg-white h-screen lg:h-auto -right-[100%] lg:right-0 w-full lg:block lg:static ease-in-out duration-500 transition-all;
   }
 
   nav.open {
@@ -23,6 +23,10 @@
 
   nav ul li:last-child {
     @apply border-0;
+  }
+
+  .faq-content h3 {
+    @apply sm/lg:~text-[1rem]/[1.2rem];
   }
 
   /* !~~~~~~~~~~ BURGER ~~~~~~~~~~! */
@@ -43,11 +47,11 @@
   }
 
   .burger__menu.open span:first-child {
-    @apply transform translate-y-[1px] translate-x-[17px] rotate-[215deg] transition-all w-[1.5rem] duration-700;
+    @apply transform translate-y-[1px] translate-x-[17px] rotate-[30deg] transition-all w-[1.5rem] duration-700;
   }
 
   .burger__menu.open span:last-child {
-    @apply transform translate-y-[0px] translate-x-[17px] rotate-[140deg] transition-all w-[1.5rem] duration-700;
+    @apply transform translate-y-[0px] translate-x-[17px] rotate-[-30deg] transition-all w-[1.5rem] duration-700;
   }
 
   .dropdownItem ul {
