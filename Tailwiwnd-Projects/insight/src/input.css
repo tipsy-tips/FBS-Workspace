@@ -16,6 +16,18 @@ form {
   @apply animate-spin;
 } */
 
+.sticky {
+  @apply md:fixed
+  md:w-[90%] 
+  md:p-[1rem] 
+  md:rounded-xl 
+  md:transition-all 
+  md:bg-dark z-50
+  md:left-0
+  md:right-0
+  md:mx-auto;
+}
+
 /* !~~~~~~~~~~ HEADER ~~~~~~~~~~! */
 .header__banner {
   @apply bg-banner
@@ -102,20 +114,24 @@ form {
 }
 
 .project-content::after {
-  @apply absolute top-0 left-0
-  content-['']
-  w-full h-full
-  bg-black/60
-  transition-all;
+  @apply md:absolute 
+  md:top-0 
+  md:left-0
+  md:content-['']
+  md:w-full md:h-full
+  md:bg-black/60
+  md:transition-all;
 }
 .project-content:hover::after {
-  @apply scale-0;
+  @apply md:scale-0;
 }
 .content {
-  @apply opacity-0
-  hover:opacity-100
-  transition-all
-  duration-700;
+  @apply md:opacity-0;
+}
+
+.project-content:hover .content {
+  @apply md:opacity-100
+  md:transition-all;
 }
 
 @layer base {
