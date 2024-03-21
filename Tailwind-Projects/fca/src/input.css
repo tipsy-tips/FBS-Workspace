@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .container {
+    @apply max-w-[90rem] p-[2rem]  w-full mx-auto;
+  }
+}
+
+@layer utilities {
+  .btn {
+    @apply inline-block
+      px-[1rem]
+      rounded-2xl
+      border-transparent
+      border-[1]
+      font-bold
+      transition-all
+      duration-500
+      scale-[1] 
+      hover:scale-[1.1];
+  }
+  .btn.bg--secondary {
+    @apply bg-secondary
+      text-light;
+  }
+  .btn.bg--light {
+    @apply bg-transparent
+      text-dark
+      border-dark
+      border-[1px];
+  }
+  .btn.bg--outline {
+    @apply bg-transparent
+      text-light
+      border-light
+      border-[1px];
+  }
+  .btn.bg--transparent {
+    @apply bg-transparent
+      border-[1px];
+  }
+}
