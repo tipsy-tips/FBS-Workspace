@@ -2,9 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+.faq-content h3 {
+  @apply leading-6;
+}
+
+.dropdownItem ul {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.3s ease-out;
+  margin-left: 2rem;
+}
+.dropdownItem ul li {
+  margin-bottom: 10px;
+}
+.dropdownItem.active ul {
+  max-height: 50rem;
+  transition: 0.3s ease-in;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.dropdownItem i {
+  transform: rotate(90deg);
+  transition: 0.3s ease;
+}
+.dropdownItem.active i {
+  transform: rotate(-90deg);
+  transition: 0.3s ease;
+}
+
 @layer base {
+  @font-face {
+    @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+  }
   .container {
-    @apply max-w-[90rem] p-[2rem]  w-full mx-auto;
+    @apply max-w-[90rem] px-[15px]  w-full mx-auto;
   }
 }
 
