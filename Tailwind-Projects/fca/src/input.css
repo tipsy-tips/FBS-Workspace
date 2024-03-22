@@ -15,6 +15,7 @@
     h-screen
     px-0
     pt-0
+    lg:w-full
     lg:h-auto 
     lg:right-0  
     lg:block 
@@ -24,7 +25,7 @@
   }
 
   nav ul {
-    @apply opacity-0  transition-all;
+    @apply opacity-0  transition-all lg:opacity-100;
   }
 
   nav.open {
@@ -93,10 +94,10 @@
     @apply max-h-[50rem] ease-out duration-[0.3s] my-[2rem];
   }
   .dropdownItem i {
-    @apply transform rotate-[90deg] ease-in-out duration-[0.3s];
+    @apply rotate-[90deg] ease-in-out duration-[0.3s];
   }
   .dropdownItem.active i {
-    @apply transform rotate-[90deg] ease-in-out  duration-[0.3s];
+    @apply rotate-[-90deg] ease-in-out  duration-[0.3s];
   }
 }
 
