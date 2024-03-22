@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+@layer components {
+  nav {
+    @apply absolute w-full h-full bg-light top-[75px] left-[-100%] z-10 border-t-[1px] border-gray-200 transition-all duration-[0.5s];
+  }
+  .open {
+    @apply w-full left-0;
+  }
+
+  nav ul li {
+    @apply border-b-[1px] border-gray-300;
+  }
+
+  .nav-links-dropdown {
+    @apply hidden relative left-0 p-0 border-t-[1px] bg-[#480f2d];
+  }
+
+  .nav-links-dropdown li {
+    @apply border-none hover:bg-[#6a103f];
+  }
+
+  .nav-links-dropdown li a {
+    @apply h-auto leading-[1.6] p-0;
+  }
+
+  a.active {
+    @apply bg-primary text-light;
+  }
+
+  nav ul li a {
+    @apply inline-block h-[60px] leading-[60px] w-full text-primary hover:bg-primary hover:text-light transition-all duration-300;
+  }
+
+  .burger__menu span {
+    @apply block absolute h-[8px] w-full bg-primary rounded-lg opacity-100 left-0;
+  }
+
+  .burger__menu span:nth-child(1) {
+    @apply top-0 transition-all duration-300;
+  }
+
+  .burger__menu span:nth-child(2) {
+    @apply top-[15px] transition-all duration-300;
+  }
+
+  .burger__menu span:nth-child(3) {
+    @apply top-[15px] transition-all duration-300;
+  }
+
+  .burger__menu span:nth-child(4) {
+    @apply top-[30px] transition-all duration-300;
+  }
+
+  .burger__menu.open span:nth-child(1) {
+    @apply top-[15px] w-0 left-[50%] transition-all duration-300;
+  }
+
+  .burger__menu.open span:nth-child(2) {
+    @apply rotate-[45deg] transition-all duration-300;
+  }
+
+  .burger__menu.open span:nth-child(3) {
+    @apply rotate-[-45deg] transition-all duration-300;
+  }
+
+  .burger__menu.open span:nth-child(4) {
+    @apply top-[15px] w-0 left-[50%] transition-all duration-300;
+  }
+
+
+  .services__card {
+    @apply my-10
+  }
+  
+}
+@layer base {
+  .container {
+    @apply max-w-[90rem] px-[30px]  w-full mx-auto;
+  }
+
+  body {
+    @apply font-[Montserrat];
+  }
+}
+
+@layer utilities {
+  .btn {
+    @apply inline-block
+      border-transparent
+      transition-all
+      duration-500;
+  }
+  .btn.bg--accent {
+    @apply bg-accent
+      text-light;
+  }
+
+  .btn.bg--primary {
+    @apply bg-primary
+      text-light
+      px-6
+      py-3
+      rounded-full 
+      font-semibold;
+  }
+
+  .btn.bg--light {
+    @apply bg-transparent
+      text-dark
+      border-dark
+      border-[1px];
+  }
+  .btn.bg--outline {
+    @apply bg-transparent
+      text-dark
+      border-accent
+      border-[1px];
+  }
+  .btn.bg--transparent {
+    @apply bg-transparent
+      border-[1px];
+  }
+}
