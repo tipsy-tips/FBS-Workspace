@@ -6,11 +6,36 @@
 
 @layer components {
   nav {
-    @apply absolute top-[100px] z-10 bg-white h-screen lg:h-auto -right-[100%] lg:right-0 w-full lg:block lg:static ease-in-out duration-500 transition-all;
+    @apply absolute 
+    top-[100px] 
+    z-10 
+    bg-white 
+    right-0
+    w-0
+    h-screen
+    px-0
+    pt-0
+    lg:h-auto 
+    lg:right-0  
+    lg:block 
+    lg:static 
+    ease-in-out 
+    transition-all;
+  }
+
+  nav ul {
+    @apply opacity-0  transition-all;
   }
 
   nav.open {
-    @apply right-[0%];
+    @apply w-[100%] 
+    px-10 
+    pt-10 
+    transition-all;
+  }
+
+  nav.open ul {
+    @apply opacity-100;
   }
 
   nav li {
@@ -18,7 +43,7 @@
   }
 
   nav ul li {
-    @apply relative mx-[1.25] w-full border-r-2;
+    @apply relative mx-[1.25] w-full lg:border-r-2;
   }
 
   nav ul li:last-child {
@@ -59,27 +84,19 @@
   }
 
   .dropdownItem ul {
-    max-height: 0;
-    overflow: hidden;
-    transition: 0.3s ease-out;
-    margin-left: 2rem;
+    @apply max-h-0 overflow-hidden ease-out duration-[0.3s] ml-[2rem];
   }
   .dropdownItem ul li {
-    margin-bottom: 10px;
+    @apply mb-1;
   }
   .dropdownItem.active ul {
-    max-height: 50rem;
-    transition: 0.3s ease-in;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    @apply max-h-[50rem] ease-out duration-[0.3s] my-[2rem];
   }
   .dropdownItem i {
-    transform: rotate(90deg);
-    transition: 0.3s ease;
+    @apply transform rotate-[90deg] ease-in-out duration-[0.3s];
   }
   .dropdownItem.active i {
-    transform: rotate(-90deg);
-    transition: 0.3s ease;
+    @apply transform rotate-[90deg] ease-in-out  duration-[0.3s];
   }
 }
 
