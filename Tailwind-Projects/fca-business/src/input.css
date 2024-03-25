@@ -183,6 +183,66 @@
   @apply overflow-clip;
 }
 
+/* ~~~~~~~~~~ TEAMS ~~~~~~~~~~~ */
+
+.people {
+  @apply relative 
+  left-[50%] 
+  translate-x-[-50%]
+  min-h-[420px]
+  max-w-[1070px];
+}
+
+.team img {
+  @apply block grayscale transition-all duration-500;
+}
+
+.people-info {
+  @apply text-center
+
+  opacity-0
+  transition-all
+  duration-300
+  translate-y-[20px];
+}
+
+.team:nth-child(1) .people-info {
+  @apply mr-[65px];
+}
+
+.team:hover img {
+  @apply grayscale-0;
+}
+
+.team:hover .people-info {
+  @apply opacity-100 translate-y-[0px];
+}
+
+.team:first-child {
+  @apply absolute bottom-0 left-[56px] z-[2];
+}
+.team:nth-child(2) {
+  @apply absolute bottom-0 left-[126px] z-[1];
+}
+.team:nth-child(3) {
+  @apply absolute bottom-0 left-[322px] z-[2];
+}
+.team:nth-child(4) {
+  @apply absolute bottom-0 left-[418px] z-[3];
+}
+.team:nth-child(5) {
+  @apply absolute bottom-0 left-[565px] z-[2];
+}
+.team:nth-child(6) {
+  @apply absolute bottom-0 left-[700px] z-[1];
+}
+.team:nth-child(7) {
+  @apply absolute bottom-0 left-[714px] z-[1];
+}
+.team:last-child {
+  @apply absolute bottom-0 left-[825px] z-[1];
+}
+
 /* ~~~~~~~~~~ Footer ~~~~~~~~~~~ */
 
 .footer-box:last-child {
@@ -191,7 +251,7 @@
 
 @layer base {
   .container {
-    @apply max-w-[90rem] px-[30px]  w-full mx-auto;
+    @apply max-w-[90rem] px-[30px] lg:px-[5rem]  w-full mx-auto;
   }
 
   body {

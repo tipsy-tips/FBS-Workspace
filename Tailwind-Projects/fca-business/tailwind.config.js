@@ -17,7 +17,6 @@ module.exports = {
       screens: defaultThemeScreensInRems,
       backgroundImage: {
         hero: "url('/img/hero-pattern.svg')",
-        services: "url(../dist/img/homepage/what-we-offer-bg.jpg)",
         radialGradient:
           "radial-gradient(circle farthest-side at center bottom,#e81a86,#6a103f 125%);",
       },

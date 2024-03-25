@@ -453,6 +453,13 @@ video {
   padding-right: 30px;
 }
 
+@media (min-width: 64rem) {
+  .container {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
 body {
   font-family: Montserrat;
 }
@@ -1057,6 +1064,14 @@ a.active {
   display: grid;
 }
 
+.hidden {
+  display: none;
+}
+
+.h-\[245px\] {
+  height: 245px;
+}
+
 .h-\[40px\] {
   height: 40px;
 }
@@ -1065,16 +1080,12 @@ a.active {
   height: 100%;
 }
 
-.w-1\/2 {
-  width: 50%;
-}
-
 .w-\[200px\] {
   width: 200px;
 }
 
-.w-\[240px\] {
-  width: 240px;
+.w-\[270px\] {
+  width: 270px;
 }
 
 .w-\[40px\] {
@@ -1113,6 +1124,10 @@ a.active {
   flex-direction: column;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .items-center {
   align-items: center;
 }
@@ -1123,6 +1138,10 @@ a.active {
 
 .gap-10 {
   gap: 2.5rem;
+}
+
+.gap-16 {
+  gap: 4rem;
 }
 
 .gap-3 {
@@ -1165,10 +1184,6 @@ a.active {
   background-image: radial-gradient(circle farthest-side at center bottom,#e81a86,#6a103f 125%);;
 }
 
-.bg-services {
-  background-image: url(../dist/img/homepage/what-we-offer-bg.jpg);
-}
-
 .p-2 {
   padding: 0.5rem;
 }
@@ -1177,9 +1192,24 @@ a.active {
   padding: 30px;
 }
 
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
 .py-14 {
   padding-top: 3.5rem;
   padding-bottom: 3.5rem;
+}
+
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .py-24 {
@@ -1430,6 +1460,107 @@ a.active {
   overflow: clip;
 }
 
+/* ~~~~~~~~~~ TEAMS ~~~~~~~~~~~ */
+
+.people {
+  position: relative;
+  left: 50%;
+  min-height: 420px;
+  max-width: 1070px;
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.team img {
+  display: block;
+  --tw-grayscale: grayscale(100%);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+
+.people-info {
+  --tw-translate-y: 20px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  text-align: center;
+  opacity: 0;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.team:nth-child(1) .people-info {
+  margin-right: 65px;
+}
+
+.team:hover img {
+  --tw-grayscale: grayscale(0);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.team:hover .people-info {
+  --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  opacity: 1;
+}
+
+.team:first-child {
+  position: absolute;
+  bottom: 0px;
+  left: 56px;
+  z-index: 2;
+}
+
+.team:nth-child(2) {
+  position: absolute;
+  bottom: 0px;
+  left: 126px;
+  z-index: 1;
+}
+
+.team:nth-child(3) {
+  position: absolute;
+  bottom: 0px;
+  left: 322px;
+  z-index: 2;
+}
+
+.team:nth-child(4) {
+  position: absolute;
+  bottom: 0px;
+  left: 418px;
+  z-index: 3;
+}
+
+.team:nth-child(5) {
+  position: absolute;
+  bottom: 0px;
+  left: 565px;
+  z-index: 2;
+}
+
+.team:nth-child(6) {
+  position: absolute;
+  bottom: 0px;
+  left: 700px;
+  z-index: 1;
+}
+
+.team:nth-child(7) {
+  position: absolute;
+  bottom: 0px;
+  left: 714px;
+  z-index: 1;
+}
+
+.team:last-child {
+  position: absolute;
+  bottom: 0px;
+  left: 825px;
+  z-index: 1;
+}
+
 /* ~~~~~~~~~~ Footer ~~~~~~~~~~~ */
 
 .footer-box:last-child {
@@ -1439,6 +1570,10 @@ a.active {
 @media (min-width: 64rem) {
   .lg\:ml-4 {
     margin-left: 1rem;
+  }
+
+  .lg\:block {
+    display: block;
   }
 
   .lg\:flex {
@@ -1465,12 +1600,20 @@ a.active {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .lg\:flex-row {
+    flex-direction: row;
+  }
+
   .lg\:\!items-start {
     align-items: flex-start !important;
   }
 
   .lg\:gap-10 {
     gap: 2.5rem;
+  }
+
+  .lg\:gap-32 {
+    gap: 8rem;
   }
 
   .lg\:border-r-\[1px\] {
