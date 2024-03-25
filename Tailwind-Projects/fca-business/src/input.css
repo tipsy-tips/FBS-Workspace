@@ -5,35 +5,75 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 @layer components {
+  .header__wrapper {
+    @apply py-4 flex items-center bg-center justify-between lg:py-1;
+  }
+
   nav {
-    @apply absolute w-full h-full bg-light top-[75px] left-[-100%] z-10 border-t-[1px] border-gray-200 transition-all duration-[0.5s];
+    @apply absolute w-full h-full bg-light top-[75px] left-[-100%] z-10 border-t-[1px] border-gray-200 transition-all duration-[0.5s] lg:static lg:border-none;
   }
   .open {
     @apply w-full left-0;
   }
 
-  nav ul li {
+  .nav-links {
+    @apply flex uppercase flex-col text-center lg:flex-row lg:justify-end lg:text-[14px];
+  }
+
+  .nav-links ul li {
     @apply border-b-[1px] border-gray-300;
   }
 
+  .nav-links li {
+    @apply lg:relative;
+  }
+
+  .nav-links li::after {
+    @apply lg:bottom-0
+    lg:content-['']
+    lg:block
+    lg:h-[5px]
+    lg:left-[50%]
+    lg:absolute
+    lg:bg-[#6a103f]
+    lg:[transition:width_0.3s_ease_0s,_left_0.3s_ease_0s]
+    lg:w-0;
+  }
+
+  .nav-links li:hover::after {
+    @apply w-full left-0;
+  }
+
+  .nav-links li a {
+    @apply relative inline-block h-[60px] leading-[60px] w-full text-primary hover:bg-primary hover:text-light transition-all duration-300 lg:hover:bg-transparent lg:hover:text-primary lg:px-5;
+  }
+
+  /* SUB MENU */
+  .dropdown-parent {
+    @apply lg:relative;
+  }
+
   .nav-links-dropdown {
-    @apply hidden relative left-0 p-0 border-t-[1px] bg-[#480f2d];
+    @apply hidden relative p-5 left-0 p-0 border-t-[1px] bg-[#480f2d] lg:bg-light lg:absolute lg:leading-[30px];
   }
 
   .nav-links-dropdown li {
-    @apply border-none hover:bg-[#6a103f];
+    @apply border-none hover:bg-[#6a103f] lg:hover:bg-transparent lg:w-[300px];
+  }
+
+  .nav-links-dropdown li::after {
+    @apply lg:h-[2px] lg:bottom-2;
   }
 
   .nav-links-dropdown li a {
-    @apply h-auto leading-[1.6] p-0;
+    @apply h-auto leading-[1.6] text-light !p-0 lg:text-left lg:text-primary;
   }
 
+  .nav-links-dropdown.active {
+    @apply block;
+  }
   a.active {
     @apply bg-primary text-light;
-  }
-
-  nav ul li a {
-    @apply inline-block h-[60px] leading-[60px] w-full text-primary hover:bg-primary hover:text-light transition-all duration-300;
   }
 
   .burger__menu span {
@@ -41,7 +81,7 @@
   }
 
   .burger__menu span:nth-child(1) {
-    @apply top-0 transition-all duration-300;
+    @apply opacity-100 top-0 transition-all duration-300;
   }
 
   .burger__menu span:nth-child(2) {
@@ -53,11 +93,11 @@
   }
 
   .burger__menu span:nth-child(4) {
-    @apply top-[30px] transition-all duration-300;
+    @apply opacity-100 top-[30px] transition-all duration-300;
   }
 
   .burger__menu.open span:nth-child(1) {
-    @apply top-[15px] w-0 left-[50%] transition-all duration-300;
+    @apply top-[15px] w-0 left-[50%] opacity-0 transition-all duration-300;
   }
 
   .burger__menu.open span:nth-child(2) {
@@ -69,15 +109,86 @@
   }
 
   .burger__menu.open span:nth-child(4) {
-    @apply top-[15px] w-0 left-[50%] transition-all duration-300;
+    @apply top-[15px] w-0 left-[50%] opacity-0 transition-all duration-300;
   }
-
 
   .services__card {
-    @apply my-10
+    @apply my-20 lg:my-0 lg:mb-20;
   }
-  
+
+  .services__card ul {
+    @apply list-inside;
+  }
+
+  .services__card img {
+    @apply w-[50px] h-[50px] object-contain;
+  }
+
+  /* ~~~~~~~~~~ TESTIMONIAL ~~~~~~~~~~ */
+
+  .slider-item {
+    @apply lg:grid lg:grid-cols-2 gap-5;
+  }
+
+  .slider-item img {
+    @apply mb-2 mx-auto w-[320px] h-[320px] object-cover rounded-[50%];
+  }
+
+  .slider-desc {
+    @apply z-[10] relative;
+  }
+  .slider-desc::before {
+    @apply content-quoteLeft w-[100px] top-0 left-0 absolute z-[-1];
+  }
+  .slider-desc::after {
+    @apply content-quoteRight w-[100px] bottom-0 right-0 absolute z-[-1];
+  }
+
+  .slider-person h4 {
+    @apply lg:mb-0;
+  }
+
+  .slider-grid {
+    @apply lg:grid lg:grid-cols-2;
+  }
+
+  .slider-desc {
+    @apply lg:flex lg:flex-col lg:justify-center;
+  }
+
+  .slider-desc h2 {
+    @apply lg:pb-0 lg:pt-0;
+  }
 }
+
+/* ~~~~~~~~~~ EVENTS ~~~~~~~~~~~ */
+
+.event-card {
+  @apply shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px];
+}
+
+.img-zoom {
+  @apply relative transition-all duration-[0.5s];
+}
+
+.img-zoom img {
+  @apply w-full h-[12rem] object-cover transition-all duration-[.5s];
+}
+
+.img-zoom img:hover {
+  @apply scale-[1.2];
+}
+
+.img-clip {
+  @apply overflow-clip;
+}
+
+/* ~~~~~~~~~~ Footer ~~~~~~~~~~~ */
+
+.footer-box:last-child {
+  @apply border-none;
+}
+
 @layer base {
   .container {
     @apply max-w-[90rem] px-[30px]  w-full mx-auto;
@@ -85,6 +196,30 @@
 
   body {
     @apply font-[Montserrat];
+  }
+
+  .testimonial__wrapper .tns-outer {
+    @apply relative;
+  }
+
+  .testimonial__wrapper .tns-nav {
+    @apply z-[999] absolute bottom-[1rem]
+  left-[50%]
+  -translate-x-1/2
+  -translate-y-1/2;
+  }
+
+  .testimonial__wrapper .tns-nav button {
+    @apply mx-[0.2rem]
+  w-[15px]
+  h-[15px]
+  rounded-full
+  border-none
+  bg-primary;
+  }
+
+  .testimonial__wrapper button.tns-nav-active {
+    @apply bg-[#be2a76];
   }
 }
 
@@ -106,7 +241,13 @@
       px-6
       py-3
       rounded-full 
-      font-semibold;
+      font-semibold
+      border-[1px]
+      border-transparent
+      hover:bg-light
+      hover:text-primary
+      hover:border-[1px]
+      hover:border-primary;
   }
 
   .btn.bg--light {
@@ -117,9 +258,15 @@
   }
   .btn.bg--outline {
     @apply bg-transparent
-      text-dark
-      border-accent
-      border-[1px];
+      text-primary
+      border-primary
+      px-6
+      py-3
+      rounded-full 
+      font-semibold
+      border-[1px]
+      hover:border-primary/20
+      hover:bg-gray-200;
   }
   .btn.bg--transparent {
     @apply bg-transparent

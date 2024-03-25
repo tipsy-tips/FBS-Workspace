@@ -1,28 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const dropdownToggle = document.querySelector("a[href='#dropdown']");
+  const dropdownToggle = document.querySelector(".dropdown-parent");
   const dropdownMenu = document.querySelector(".nav-links-dropdown");
 
   dropdownToggle.addEventListener("mouseenter", function () {
-    dropdownMenu.style.display = "block";
-
     dropdownToggle.classList.add("active");
+    dropdownMenu.classList.add("active");
   });
 
   dropdownToggle.addEventListener("mouseleave", function () {
-    dropdownMenu.style.display = "none";
-
     dropdownToggle.classList.remove("active");
+    dropdownMenu.classList.remove("active");
   });
 
   dropdownMenu.addEventListener("mouseenter", function () {
-    dropdownMenu.style.display = "block";
-
     dropdownToggle.classList.add("active");
   });
 
   dropdownMenu.addEventListener("mouseleave", function () {
-    dropdownMenu.style.display = "none";
     dropdownToggle.classList.remove("active");
+    dropdownMenu.classList.remove("active");
   });
 });
 

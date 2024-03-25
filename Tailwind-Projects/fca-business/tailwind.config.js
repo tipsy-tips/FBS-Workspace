@@ -19,6 +19,10 @@ module.exports = {
         hero: "url('/img/hero-pattern.svg')",
         services: "url(../dist/img/homepage/what-we-offer-bg.jpg)",
       },
+      content: {
+        quoteLeft: 'url("../dist/img/homepage/quote-left.svg")',
+        quoteRight: 'url("../dist/img/homepage/quote-right.svg")',
+      },
       colors: {
         dark: "#2b2b2b",
         light: "#ffffff",
