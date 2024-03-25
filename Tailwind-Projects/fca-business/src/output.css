@@ -1007,6 +1007,11 @@ a.active {
   margin-right: auto;
 }
 
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
 .my-20 {
   margin-top: 5rem;
   margin-bottom: 5rem;
@@ -1060,8 +1065,16 @@ a.active {
   height: 100%;
 }
 
+.w-1\/2 {
+  width: 50%;
+}
+
 .w-\[200px\] {
   width: 200px;
+}
+
+.w-\[240px\] {
+  width: 240px;
 }
 
 .w-\[40px\] {
@@ -1120,12 +1133,12 @@ a.active {
   gap: 1rem;
 }
 
-.gap-\[2rem\] {
-  gap: 2rem;
+.gap-5 {
+  gap: 1.25rem;
 }
 
-.border-r-\[1px\] {
-  border-right-width: 1px;
+.gap-\[2rem\] {
+  gap: 2rem;
 }
 
 .border-light {
@@ -1146,6 +1159,10 @@ a.active {
 .bg-primary {
   --tw-bg-opacity: 1;
   background-color: rgb(106 16 63 / var(--tw-bg-opacity));
+}
+
+.bg-radialGradient {
+  background-image: radial-gradient(circle farthest-side at center bottom,#e81a86,#6a103f 125%);;
 }
 
 .bg-services {
@@ -1178,6 +1195,11 @@ a.active {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.py-\[10vh\] {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
 }
 
 .pb-16 {
@@ -1239,6 +1261,10 @@ a.active {
 
 .font-bold {
   font-weight: 700;
+}
+
+.font-extrabold {
+  font-weight: 800;
 }
 
 .font-light {
@@ -1339,6 +1365,27 @@ a.active {
   border-color: rgb(106 16 63 / 0.2);
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
+.btn.bg--outline-light {
+  border-radius: 9999px;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.btn.bg--outline-light:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(106 16 63 / var(--tw-text-opacity));
 }
 
 .btn.bg--transparent {

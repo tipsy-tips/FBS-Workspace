@@ -268,6 +268,18 @@
       hover:border-primary/20
       hover:bg-gray-200;
   }
+
+  .btn.bg--outline-light {
+    @apply text-light
+      border-light
+      px-6
+      py-3
+      rounded-full 
+      font-semibold
+      border-[1px]
+      hover:text-primary
+      hover:bg-light;
+  }
   .btn.bg--transparent {
     @apply bg-transparent
       border-[1px];
