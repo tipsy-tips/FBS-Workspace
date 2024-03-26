@@ -112,6 +112,16 @@
     @apply top-[15px] w-0 left-[50%] opacity-0 transition-all duration-300;
   }
 
+  #banner {
+    @apply bg-animated bg-no-repeat bg-[length:180%] animate-gradient;
+  }
+
+  .banner-content h1:after {
+    /* This value is the OPPOSITE color of our background */
+    color: #fff;
+    mix-blend-mode: difference;
+  }
+
   .services__card {
     @apply my-20 lg:my-0 lg:mb-20;
   }

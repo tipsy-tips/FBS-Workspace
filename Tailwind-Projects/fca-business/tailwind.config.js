@@ -13,10 +13,20 @@ module.exports = {
   },
   theme: {
     extend: {
+      keyframes: {
+        gradient: {
+          "0%": { "background-position": "25% 0%" },
+          "100%": { "background-position": "40% 80%" },
+        },
+      },
+      animation: {
+        gradient: "gradient 15s ease forwards;",
+      },
       fontSize: defaultThemeFontSizeInRems,
       screens: defaultThemeScreensInRems,
       backgroundImage: {
-        hero: "url('/img/hero-pattern.svg')",
+        services: "url('../dist/img/homepage/what-we-offer-bg.jpg')",
+        animated: "url('../dist/img/about-us-540.svg')",
         radialGradient:
           "radial-gradient(circle farthest-side at center bottom,#e81a86,#6a103f 125%);",
       },
