@@ -1,4 +1,4 @@
-let mybutton = document.getElementById("topbtn");
+let anchorTop = document.getElementById("topbtn");
 
 window.onscroll = function () {
   scrollFunction();
@@ -6,9 +6,9 @@ window.onscroll = function () {
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.opacity = "100%";
+    anchorTop.style.opacity = "100%";
   } else {
-    mybutton.style.opacity = "0%";
+    anchorTop.style.opacity = "0%";
   }
 }
 
