@@ -270,7 +270,7 @@
 }
 
 .topbtn {
-  @apply transition-all duration-300 fixed bottom-[30px] right-[5%] z-50 text-center px-[15px] py-[5px] border-[1px] border-[#ddd] rounded-md bg-black/30;
+  @apply fixed transition-all duration-300  bottom-[30px] right-[5%] z-50 text-center px-[15px] py-[5px] border-[1px] border-[#ddd] rounded-md bg-black/30;
 }
 
 .topbtn img {

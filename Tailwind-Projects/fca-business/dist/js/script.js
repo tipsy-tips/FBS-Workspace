@@ -12,11 +12,6 @@ function scrollFunction() {
   }
 }
 
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-
 const burgerbtn = document.querySelector(".burger__menu");
 const headerA = document.querySelector("nav");
 burgerbtn.addEventListener("click", () => {
