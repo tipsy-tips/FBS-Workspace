@@ -1,26 +1,21 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const dropdownToggle = document.querySelector(".dropdown-parent");
-  const dropdownMenu = document.querySelector(".nav-links-dropdown");
+let mybutton = document.getElementById("topbtn");
 
-  dropdownToggle.addEventListener("mouseenter", function () {
-    dropdownToggle.classList.add("active");
-    dropdownMenu.classList.add("active");
-  });
+window.onscroll = function () {
+  scrollFunction();
+};
 
-  dropdownToggle.addEventListener("mouseleave", function () {
-    dropdownToggle.classList.remove("active");
-    dropdownMenu.classList.remove("active");
-  });
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.opacity = "100%";
+  } else {
+    mybutton.style.opacity = "0%";
+  }
+}
 
-  dropdownMenu.addEventListener("mouseenter", function () {
-    dropdownToggle.classList.add("active");
-  });
-
-  dropdownMenu.addEventListener("mouseleave", function () {
-    dropdownToggle.classList.remove("active");
-    dropdownMenu.classList.remove("active");
-  });
-});
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
 
 const burgerbtn = document.querySelector(".burger__menu");
 const headerA = document.querySelector("nav");

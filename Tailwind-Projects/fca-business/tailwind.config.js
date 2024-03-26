@@ -14,13 +14,14 @@ module.exports = {
   theme: {
     extend: {
       keyframes: {
-        gradient: {
-          "0%": { "background-position": "25% 0%" },
+        mobileGradient: {
+          "0%": { "background-position": "25%" },
           "100%": { "background-position": "40% 80%" },
         },
       },
       animation: {
         gradient: "gradient 15s ease forwards;",
+        mobileGradient: "mobileGradient 15s ease forwards;",
       },
       fontSize: defaultThemeFontSizeInRems,
       screens: defaultThemeScreensInRems,

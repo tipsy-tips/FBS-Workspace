@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./css/animate.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
@@ -26,7 +27,7 @@
           class="header__wrapper"
         >
           <div class="logo">
-            <a href="#"><img src="./img/logo-fbs.png" alt="" /></a>
+            <a href="#"><img src="./img/logo-fbs.png" alt="" class="wow animate__animated animate__fadeIn"/></a>
           </div>
           <nav>
 
@@ -41,20 +42,20 @@
                   <a href="#dropdown">Services</a>
                   <ul class="nav-links-dropdown lg:p-2">
                     <li class="p-2 lg:px-1">
-                      <a href="#" class="text-light text-sm">Web Solutions</a>
+                      <a href="#services" class="text-light text-sm">Web Solutions</a>
                     </li>
                     <li class="p-2 lg:px-1">
-                      <a href="#" class="text-light text-sm"
+                      <a href="#services" class="text-light text-sm"
                         >Virtual Assistant Solutions</a
                       >
                     </li>
                     <li class="p-2 lg:px-1">
-                      <a href="#" class="text-light text-sm"
+                      <a href="#services" class="text-light text-sm"
                         >Accounting Solutions</a
                       >
                     </li>
                     <li class="p-2 lg:px-1">
-                      <a href="#" class="text-light text-sm"
+                      <a href="#services" class="text-light text-sm"
                         >Learning Center Solutions</a
                       >
                     </li>
@@ -87,10 +88,10 @@
       </div>
     </header>
 
-    <section id="banner" class="banner bg-[#f5f5f5] py-12">
+    <section class="banner bg-[#f5f5f5] py-20">
       <div class="container">
-        <div class="banner__wrapper grid grid-cols-1 gap-10 lg:grid lg:grid-cols-2">
-          <div class="banner-content">
+        <div class="banner__wrapper items-center grid grid-cols-1 gap-10 lg:grid lg:grid-cols-2">
+          <div class="banner-content wow animate__animated animate__fadeInUp">
             <h1 class="text-3xl mb-10">
               Excellence in <strong>Managed Services</strong> and
               <strong>Web Solutions</strong>
@@ -104,9 +105,9 @@
               want excellent customer service and a dedicated professional
               working at a competitive price, we can meet your needs.
             </p>
-            <a href="#" class="btn bg--primary uppercase">Our Services</a>
+            <a href="#services" class="btn bg--primary uppercase">Our Services</a>
           </div>
-          <img src="./img/homepage/fbs-banner-bg.png" alt="" />
+          <img src="./img/homepage/fbs-banner-bg.png" alt="" class="wow animate__animated animate__fadeInUp"/>
         </div>
       </div>
     </section>
@@ -118,7 +119,7 @@
               <strong>Who We Are?</strong> <br />
               What We Do?
             </h1>
-            <p class="mb-7 lg:max-w-[70%] mx-auto">
+            <p class="mb-7 lg:max-w-[70%] mx-auto wow animate__animated animate__fadeInLeft">
               Frontline Business Solutions, Inc. is an Information Technology and
               Accounting business solutions company that offers a variety of
               services to SME’s. Our commitment is to leverage business success
@@ -134,14 +135,14 @@
         </div>
       </section>
 
-    <section class="services bg-services py-8">
+    <section id="services" class="services bg-services py-8">
       <div class="container">
         <h1 class="text-light pt-28 pb-20 text-3xl text-center">
           What <strong>We Offer?</strong>
         </h1>
         <div class="services__wrapper lg:grid grid-cols-4">
 
-          <div class="services__card mt-0 text-light">
+          <div class="services__card mt-0 text-light wow animate__animated animate__fadeInUp">
             <div class="mb-10 card-title flex flex-col items-center">
               <img
                 src="./img/homepage/code-solid.png"
@@ -160,7 +161,7 @@
               <li>Odit, fuga mollitia.</li>
             </ul>
           </div>
-          <div class="services__card text-light">
+          <div class="services__card text-light wow animate__animated animate__fadeInUp">
             <div class="mb-10 card-title flex flex-col items-center">
               <img
                 src="./img/homepage/headset-solid.png"
@@ -180,7 +181,7 @@
             </ul>
           </div>
 
-          <div class="services__card text-light">
+          <div class="services__card text-light wow animate__animated animate__fadeInUp">
             <div class="mb-10 card-title flex flex-col items-center">
               <img
                 src="./img/homepage/calculator-solid.png"
@@ -196,7 +197,7 @@
             </ul>
           </div>
 
-          <div class="services__card text-light">
+          <div class="services__card text-light wow animate__animated animate__fadeInUp">
             <div class="mb-10 card-title flex flex-col items-center">
               <img
                 src="./img/homepage/chalkboard-user-solid.png"
@@ -223,7 +224,7 @@
           <div class="testimonial__slider">
             <div class="slider-item">
               <div class="slider-grid">
-              <div class="slider-person">
+              <div class="slider-person wow animate__animated animate__fadeInLeft">
                 <img
                   src="./img/homepage/jamesDavidson-e1685672789528.jpeg"
                   alt=""
@@ -240,10 +241,10 @@
                   Avant Advisory Group
                 </h4>
               </div>
-              
-              <div class="slider-desc">
+              <div class="flex-box flex flex-col justify-center py-10">
+              <div class="slider-desc wow animate__animated animate__fadeInRight">
                 <h2
-                  class="text-center max-w-[80%] font-bold text-[14px] leading-8 heading-1 mx-auto pb-16 lg:pt-16"
+                  class="text-center max-w-[80%] font-bold text-[14px] leading-8 heading-1 mx-auto lg:pb-16 lg:pt-16"
                 >
                   “Frontline Business Solutions” is beyond an exceptional firm.
                   Professional courtesy, responsiveness, competence, and client
@@ -258,6 +259,7 @@
                   Lord. (Colossians 3:23-24) Thank you for what you do,
                   Frontline!”
                 </h2>
+              </div>
               </div>
             </div>
             </div>
@@ -275,9 +277,10 @@
                     Twomiles
                   </h4>
                 </div>
+                <div class="flex-box flex flex-col justify-center">
               <div class="slider-desc">
                 <h2
-                  class="text-center max-w-[80%] font-bold text-[14px] leading-8 heading-1 mx-auto pb-16"
+                  class="text-center max-w-[80%] font-bold text-[20px] leading-8 heading-1 mx-auto lg:pb-16"
                 >
                   “FBS is a true partner to our firm. They have help form our
                   vision and trajectory. We are immensely grateful our
@@ -286,6 +289,7 @@
                   perspective, they are fantastic people. We are blessed to work
                   with them.”
                 </h2>
+              </div>
               </div>
             </div>
             </div>
@@ -305,16 +309,17 @@
                     Twomiles
                   </h4>
                 </div>
-              
+                <div class="flex-box flex flex-col justify-center">
               <div class="slider-desc">
                 <h2
-                  class="text-center max-w-[80%] font-bold text-[14px] leading-8 heading-1 mx-auto pb-16"
+                  class="text-center max-w-[80%] font-bold text-[20px] leading-8 heading-1 mx-auto lg:pb-16"
                 >
                   “The team at Frontline is incredible. They genuinely care
                   about our needs and share in our vision of success. We are
                   proud to call them a business partner and appreciate all the
                   hard work they do for us.”
                 </h2>
+              </div>
               </div>
             </div>
             </div>
@@ -332,12 +337,14 @@
                     Social Economic Enterprises
                   </h4>
                 </div>
+                <div class="flex-box flex flex-col justify-center">
               <div class="slider-desc">
                 <h2
-                  class="text-center max-w-[80%] font-bold text-[14px] leading-8 heading-1 mx-auto pb-16"
+                  class="text-center max-w-[80%] font-bold text-[20px] leading-8 heading-1 mx-auto lg:pb-16"
                 >
                   There is no better business model.
                 </h2>
+              </div>
               </div>
             </div>
             </div>
@@ -358,15 +365,17 @@
                   </h4>
                 
               </div>
+              <div class="flex-box flex flex-col justify-center">
               <div class="slider-desc">
                 <h2
-                  class="text-center max-w-[80%] font-bold text-[14px] leading-8 heading-1 mx-auto pb-16"
+                  class="text-center max-w-[80%] font-bold text-[20px] leading-8 heading-1 mx-auto lg:pb-16"
                 >
                   "I have worked with a number of different website developers,
                   but none have been as responsive or as quick to turn the work
                   around."
                 </h2>
               </div>
+            </div>
             </div>
           </div>
             <div class="slider-item">
@@ -383,15 +392,16 @@
                     Frontline Christian Academy
                   </h4>
                 </div>
-              
+                <div class="flex-box flex flex-col justify-center">
               <div class="slider-desc">
                 <h2
-                  class="text-center max-w-[80%] font-bold text-[14px] leading-8 heading-1 mx-auto pb-16"
+                  class="text-center max-w-[80%] font-bold text-[20px] leading-8 heading-1 mx-auto lg:pb-16"
                 >
                   "We enjoyed working together and meeting with the Frontline
                   Business Solutions Staff when they built the website of
                   Frontline Christian Academy."
                 </h2>
+              </div>
               </div>
             </div>
             </div>
@@ -412,15 +422,17 @@
                   </h4>
                 
               </div>
-              <div class="slider-desc">
-                <h2
-                  class="text-center max-w-[80%] font-bold text-[14px] leading-8 heading-1 mx-auto pb-16"
-                >
-                  "Yes, we are pleased to have chosen Frontline Business
-                  Solutions as our partner in developing the PHIX Genomics
-                  website because you are able to deliver on your promises."
-                </h2>
-              </div>
+              <div class="flex-box flex flex-col justify-center">
+                <div class="slider-desc">
+                  <h2
+                    class="text-center max-w-[80%] font-bold text-[20px] leading-8 heading-1 mx-auto lg:pb-16"
+                  >
+                    "Yes, we are pleased to have chosen Frontline Business
+                    Solutions as our partner in developing the PHIX Genomics
+                    website because you are able to deliver on your promises."
+                  </h2>
+                </div>
+            </div>
             </div>
             </div>
           </div>
@@ -428,14 +440,14 @@
       </div>
     </section>
 
-    <section id="#news" class="events py-24">
+    <section class="events py-24">
       <div class="container">
         <h1 class="text-center text-3xl mb-10">
           <strong>Events</strong> and <strong>Activities</strong>
         </h1>
         <div class="events__wrapper">
           <div class="event-cards mb-[2rem] lg:flex lg:gap-10">
-          <div class="event-card mb-10">
+          <div class="event-card mb-10 wow animate__animated animate__fadeInUp">
             <div class="img-zoom">
               <div class="img-clip">
                 <img
@@ -455,7 +467,7 @@
               <a class="btn bg--primary">Read More</a>
           </div>
           </div>
-          <div class="event-card mb-10">
+          <div class="event-card mb-10 wow animate__animated animate__fadeInUp">
             <div class="img-zoom">
               <div class="img-clip">
                 <img
@@ -474,7 +486,7 @@
               <a class="btn bg--primary">Read More</a>
           </div>
           </div>
-          <div class="event-card mb-10">
+          <div class="event-card mb-10 wow animate__animated animate__fadeInUp">
             <div class="img-zoom">
               <div class="img-clip">
                 <img
@@ -503,7 +515,7 @@
       <div class="container">
         <div class="footer__wrapper text-light lg:grid lg:grid-cols-3">
         <div class="footer-box py-5 flex flex-col items-center lg:px-2 lg:py-0 lg:border-r-[1px] border-light">
-          <img src="./img/logo-fbs-wht.png" alt="" class="w-[200px]">
+          <img src="./img/logo-fbs-wht.png" alt="" class="w-[200px] wow animate__animated animate__fadeIn">
           <p class="text-xs mb-5">Copyright © 2024</p>
           <ul class="flex gap-[2rem]">
             <li><a href="#"><i class="fa-brands text-2xl fa-square-facebook"></i></a></li>
@@ -523,7 +535,7 @@
           </ul>
         </div>
         <div class="footer-box py-5 flex flex-col items-center lg:px-2 lg:py-0 lg:border-r-[1px] lg:!items-start lg:ml-4 border-light">
-          <h2 class="text-center text-sm mb-3 font-semibold lg:text-left">SERVICES WE OFFER</h2>
+          <h2 class="text-center text-sm mb-3 font-semibold lg:text-left">CONTACT DETAILS</h2>
           <ul class="flex flex-col text-center lg:text-left gap-3">
             <li class="text-[10px]"><i class="fa-solid fa-phone text-[15px] mr-1"></i><a href="#">049 501 3592</a></li>
             <li class="text-[10px]"><i class="fa-solid fa-mobile text-[15px] mr-1"></i><a href="#">0927 168 6810</a></li>
@@ -536,8 +548,20 @@
       </div>
     </footer>
 
+    <div id="topbtn" class="topbtn">
+      <a href="#top">
+        <img src="./img/caret-up.svg" alt="" />
+      </a>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+    
     <script src="./js/script.js"></script>
+
+    <script src="js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
 
     <script>
       var slider = tns({

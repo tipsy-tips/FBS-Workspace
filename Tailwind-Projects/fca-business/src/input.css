@@ -53,6 +53,10 @@
     @apply lg:relative;
   }
 
+  .dropdown-parent:hover .nav-links-dropdown {
+    @apply !block z-10;
+  }
+
   .nav-links-dropdown {
     @apply hidden relative p-5 left-0 p-0 border-t-[1px] bg-[#480f2d] lg:bg-light lg:absolute lg:leading-[30px];
   }
@@ -112,14 +116,20 @@
     @apply top-[15px] w-0 left-[50%] opacity-0 transition-all duration-300;
   }
 
-  #banner {
-    @apply bg-animated bg-no-repeat bg-[length:180%] animate-gradient;
+  .banner {
+    @apply bg-animated bg-[length:400%_400%] animate-mobileGradient lg:animate-gradient;
   }
 
-  .banner-content h1:after {
-    /* This value is the OPPOSITE color of our background */
-    color: #fff;
-    mix-blend-mode: difference;
+  @media (min-width: 64rem) {
+    @keyframes gradient {
+      0% {
+        background-position: 25% 0%;
+      }
+
+      100% {
+        background-position: 40% 80%;
+      }
+    }
   }
 
   .services__card {
@@ -137,7 +147,7 @@
   /* ~~~~~~~~~~ TESTIMONIAL ~~~~~~~~~~ */
 
   .slider-item {
-    @apply lg:grid lg:grid-cols-2 gap-5;
+    @apply lg:grid lg:grid-cols-2 gap-5 items-center;
   }
 
   .slider-item img {
@@ -145,13 +155,13 @@
   }
 
   .slider-desc {
-    @apply z-[10] relative;
+    @apply z-[1] relative;
   }
   .slider-desc::before {
-    @apply content-quoteLeft w-[100px] top-0 left-0 absolute z-[-1];
+    @apply content-quoteLeft w-[100px] top-[-50px] left-0 absolute z-[-1];
   }
   .slider-desc::after {
-    @apply content-quoteRight w-[100px] bottom-0 right-0 absolute z-[-1];
+    @apply content-quoteRight w-[100px] bottom-[-50px] right-0 absolute z-[-1];
   }
 
   .slider-person h4 {
@@ -259,7 +269,19 @@
   @apply border-none;
 }
 
+.topbtn {
+  @apply transition-all duration-300 fixed bottom-[30px] right-[5%] z-50 text-center px-[15px] py-[5px] border-[1px] border-[#ddd] rounded-md bg-black/30;
+}
+
+.topbtn img {
+  @apply w-[3.5rem] h-[3.5rem];
+}
+
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   .container {
     @apply max-w-[90rem] px-[30px] lg:px-[5rem]  w-full mx-auto;
   }
@@ -273,7 +295,7 @@
   }
 
   .testimonial__wrapper .tns-nav {
-    @apply z-[999] absolute bottom-[1rem]
+    @apply z-[999] absolute bottom-[-3rem] lg:bottom-0
   left-[50%]
   -translate-x-1/2
   -translate-y-1/2;
