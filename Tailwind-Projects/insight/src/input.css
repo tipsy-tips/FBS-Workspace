@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* h1,
 h2,
 h3,
@@ -18,9 +22,10 @@ form {
 
 .sticky {
   @apply md:fixed
-  md:w-[90%] 
+  md:w-[70%] 
   md:p-[1rem] 
   md:rounded-xl 
+  md:duration-500
   md:transition-all 
   md:bg-dark z-50
   md:left-0
@@ -35,6 +40,11 @@ form {
      h-[700px]
      md:h-[100vh];
 }
+
+.header__banner .container {
+  @apply md:duration-500;
+}
+
 .header__wrapper {
   @apply flex items-center justify-between;
 }
