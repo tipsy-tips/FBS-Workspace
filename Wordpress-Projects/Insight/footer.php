@@ -1,3 +1,5 @@
+<?php wp_footer() ?>
+
 <section class="footer">
       <div class="container">
         <div class="footer__wrapper">
