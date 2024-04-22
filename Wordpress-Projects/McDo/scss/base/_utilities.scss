@@ -1,0 +1,71 @@
+@use "../abstract/" as *;
+
+$colors: (
+  "primary": $clr--primary,
+  "secondary": $clr--secondary,
+  "accent": $clr--accent,
+  "dark": $clr--dark,
+  "light": $clr--light,
+);
+
+@each $key, $val in $colors {
+  .bgc-#{$key} {
+    background-color: #{$val};
+  }
+  .clr-#{$key} {
+    color: #{$val};
+  }
+}
+
+$displays: flex, grid, block, inline;
+
+@each $display in $displays {
+  .#{$display} {
+    display: #{$display};
+  }
+}
+
+.align-left {
+  text-align: flip(left, right);
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: flip(right, left);
+}
+
+.align-justify {
+  text-align: justify;
+}
+
+.bold {
+  font-family: "Speedee-bold", Arial, Helvetica, sans-serif;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+@for $i from 1 through 10 {
+  .mb-#{$i} {
+    margin-bottom: #{$i}rem;
+  }
+  .mt-#{$i} {
+    margin-top: #{$i}rem;
+  }
+  .mx-#{$i} {
+    margin: 0 #{$i}rem;
+  }
+  .my-#{$i} {
+    margin: #{$i}rem 0;
+  }
+  .fs-#{$i} {
+    font-size: #{$i}rem;
+  }
+  .p-#{$i} {
+    padding: #{$i}rem;
+  }
+}

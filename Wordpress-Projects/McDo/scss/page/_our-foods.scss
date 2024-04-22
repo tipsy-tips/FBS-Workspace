@@ -1,0 +1,115 @@
+@use "../abstract/" as *;
+
+.banner {
+  @include flex(center, center);
+  min-height: 20rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  h1 {
+    font-size: clamp(3rem, 10vw, 7rem);
+    font-weight: bold;
+  }
+}
+
+.banner--food {
+  background-image: url("../../img/ourFood/foodBanner-mobile.jpeg");
+  @include mediaQuery {
+    background-image: url("../../img/ourFood/foodBanner-desktop.jpeg");
+  }
+}
+
+.category {
+  padding: 5rem 0;
+  &__wrapper {
+    @include grid(2);
+    @include mediaQuery {
+      @include grid(3);
+      grid-row-gap: 6rem;
+    }
+    a {
+      justify-self: center;
+    }
+  }
+
+  &__card {
+    position: relative;
+    border-radius: 3rem;
+    overflow: hidden;
+    height: 120px;
+    width: 120px;
+
+    @include mediaQuery {
+      height: 265px;
+      width: 265px;
+    }
+
+    &:hover img {
+      transform: scale(1.2);
+    }
+    img {
+      @include imgCover(100%, 100%);
+      transition: 0.5s ease;
+    }
+    h5 {
+      //   position: absolute;
+      //   bottom: 0;
+      //   left: 50%;
+
+      @include absolute(unset, unset, 0, 50%);
+      font-size: clamp(1rem, 2vw, 2rem);
+      transform: translateX(-50%);
+      white-space: nowrap;
+    }
+  }
+}
+
+.quality {
+  padding: 5rem 0;
+  &__header {
+    text-align: center;
+    h3 {
+      font-size: clamp(2.5rem, 10vw, 6rem);
+    }
+    h5 {
+      font-size: clamp(1.5rem, 10vw, 2rem);
+    }
+  }
+  &__wrapper {
+    background-image: url(../../img/ourFood/sectionBg.svg);
+    background-size: 12rem;
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    @include mediaQuery {
+      flex-basis: 50%;
+      justify-content: center;
+    }
+  }
+
+  &__card {
+    position: relative;
+    border-radius: 3rem;
+    overflow: hidden;
+    margin-bottom: 3rem;
+    @include mediaQuery {
+      flex-basis: 45%;
+    }
+    h4 {
+      @include absolute(8rem, 5rem, unset, unset);
+      font-size: 3.6rem;
+    }
+
+    p {
+      margin-bottom: 0;
+      text-align: justify;
+      @include mediaQuery {
+        min-height: 24rem;
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

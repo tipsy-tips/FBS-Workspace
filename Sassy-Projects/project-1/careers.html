@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>McDonald's Philippines</title>
+    <link rel="shortcut icon" href="./img/" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../dist/css/main.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.min.css
+    ">
+    
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <img src="./img/McDonald/logo.svg" alt="" />
+
+          <div class="dropdown">
+              <button class="close"><i class="fas fa-chevron-right"></i></button>
+              <nav class="nav">
+                <ul class="nav__menu">
+                  <li>
+                    <a href="#">About Us</a>
+                    <ul class="nav__submenu">
+                      <li><a href="#">Our Story</a></li>
+                      <li><a href="#">Our Food</a></li>
+                      <li><a href="#">Our Stores</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">McDelivery</a></li>
+                  <li><a href="#">Careers</a></li>
+                  <li><a href="#">Charity</a></li>
+                  <li>
+                    <a href="#">Opportunities</a>
+                    <ul class="nav__submenu">
+                      <li><a href="#">Property Leasing</a></li>
+                      <li><a href="#">Franchising</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">Family Activities</a>
+                    <ul class="nav__submenu">
+                      <li><a href="#">Mcdo Party</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">NXTGEN</a></li>
+                  <li><a href="#">McCafe</a></li>
+                  <li><a href="#">McCafe</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">Digital Treats</a></li>
+                </ul>
+              </nav>
+              
+              <div class="dropdown__footer">
+                <img src="./img/McDonald/icon-mcdelivery.png" alt="">
+                <ul class="tnc">
+                  <li><a href="#">Terms & Conditions</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                </ul>
+              </div>
+          </div>
+
+          <div class="toggle__button">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="career">
+        <div class="container">
+            <div class="career__wrapper">
+                <div class="career__card">
+                    <div class="career__info">
+                        <a href="">Manager Trainer - NCR</a>
+                        <div class="field-location">
+                            <h2>NCR</h2>
+                            <h2>Entry-Level</h2>
+                        </div>
+                    </div>
+                    <div><a class="apply--btn" href="">APPLY</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer bgc-primary">
+        <div class="container">
+          <div class="footer__wrapper">
+            <div class="footer__action">
+              <img src="./img/McDonald/icon-mcdelivery.png" alt="">
+            <ul>
+              <li><img src="./img/McDonald/icon-googleplay.png" alt=""></img></li>
+              <li><img src="./img/McDonald/icon-appstore.png" alt=""></img></li>
+            </ul>
+  
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Our Food</a></li>
+              <li><a href="#">Terms and Conditions</a></li>
+              <li><a href="#">Opportunities</a></li>
+            </ul>
+  
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Carrers</a></li>
+              <li><a href="#">Menu</a></li>
+              <li><a href="#">Family Activities</a></li>
+            </ul>
+            </div>
+            
+            <div class="footer__connect">
+              <p>Follow us on</p>
+              <ul class="flex">
+                <li>
+                  <a href="#"><i class="fab fa-facebook"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+  
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+  
+        <script>
+            var slider = tns({
+            container: '.banner',
+            items: 1,
+            slideBy: 'page',
+            autoplay: true,
+            controls: false,
+            autoplayButtonOutput: false
+          });
+  
+          const toggleBtn = document.querySelector('.toggle__button')
+          const dropdown = document.querySelector('.dropdown')
+          const closeBtn = document.querySelector('.close')
+  
+          toggleBtn.addEventListener('click', ()=> {
+            dropdown.classList.add('show');
+            toggleBtn.classList.add('cross');
+          })
+  
+          closeBtn.addEventListener('click', ()=> {
+            dropdown.classList.remove('show');
+            toggleBtn.classList.remove('cross');
+          })
+  
+        </script>
+  
+  
+  
+    </body>
+  </html>
+  

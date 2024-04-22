@@ -1,0 +1,64 @@
+@use "../abstract/" as *;
+
+.banner--family {
+  background-image: url("../../img/family/Family-MobileBanner-banner-mobile.jpeg");
+  @include mediaQuery {
+    background-image: url("../../img//family/Family-DesktopBanner-banner.jpeg");
+    min-height: 40rem;
+  }
+}
+
+.activities {
+  &__wrapper {
+    margin-top: 6rem;
+    @include mediaQuery {
+      @include grid(1);
+    }
+  }
+  &__blurb {
+    @include mediaQuery {
+      @include flex(center, center);
+    }
+    gap: 5rem;
+
+    &--left {
+      @include mediaQuery {
+        width: 30%;
+      }
+      img {
+        height: 450px;
+        width: 370px;
+        border-radius: 2rem;
+        object-fit: cover;
+      }
+    }
+
+    &--right {
+      @include mediaQuery {
+        width: 50%;
+      }
+
+      p {
+        text-align: justify;
+      }
+
+      h2 {
+        font-size: clamp(1rem, 7vw, 4.8rem);
+        font-weight: 700;
+      }
+      a {
+        @include button(1rem 10rem);
+        font-family: "Speedee-bold";
+        width: 100%;
+        border-radius: 1rem;
+        font-size: clamp(2.5rem, 10vw, 1rem);
+        align-self: flex-end;
+      }
+      @include mediaQuery {
+        a {
+          width: unset;
+        }
+      }
+    }
+  }
+}

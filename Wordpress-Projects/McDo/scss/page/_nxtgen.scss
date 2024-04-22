@@ -1,0 +1,40 @@
+@use "../base" as *;
+@use "../layout" as *;
+@use "../abstract/" as *;
+@use "../vendor/" as *;
+
+.banner--nxtgen {
+  background-image: url("../../img/nxtgen/NXTGEN-PageBanner-Mobile-767x455px-banner-mobile.jpeg");
+  @include mediaQuery {
+    background-image: url("../../img//nxtgen/NXTGEN-PageBanner-1920x611px-banner.jpeg");
+    min-height: 40rem;
+  }
+}
+
+.stores {
+  &__wrapper {
+    iframe {
+      aspect-ratio: 16/9;
+    }
+
+    .denote {
+      font-size: 1.3rem;
+    }
+
+    .capital {
+      font-size: 1.6rem;
+      margin-bottom: 8rem;
+
+      .city {
+        margin-bottom: 3rem;
+        p {
+          font-size: clamp(1.5rem, 2vw, 1.8rem);
+          span {
+            font-size: 1.6rem;
+            color: $clr--secondary;
+          }
+        }
+      }
+    }
+  }
+}
