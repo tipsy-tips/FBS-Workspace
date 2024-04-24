@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Regular";
+    font-weight: 400;
+    src: url(/fonts/NetflixSans-Regular.woff2) format("woff2");
+  }
+  @font-face {
+    font-family: "Bold";
+    src: url(/fonts/NetflixSans-Bold.woff2) format("woff2");
+  }
+}
+
+@layer {
+  h1,
+  h2,
+  h3 {
+    @apply font-Bold;
+  }
+  h4,
+  h5,
+  h6 {
+    @apply font-Regular;
+  }
+
+  p {
+    @apply mb-4 font-Regular;
+  }
+
+  img {
+    @apply block w-full;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-block h-[42px] px-2 py-1.5 bg-transparent text-white border border-gray-200 rounded-md;
+  }
+  .btn-accent {
+    @apply bg-accent border-accent;
+  }
+
+  .input__wrapper {
+    @apply relative mb-5;
+  }
+
+  .input__wrapper input {
+    @apply w-full px-4 pb-2 pt-6 rounded-md bg-white/5 border border-white text-white outline-none;
+  }
+
+  .input__wrapper label {
+    @apply absolute top-4 left-5 text-white pointer-events-none;
+  }
+
+  .input__wrapper input:focus + label,
+  .input__wrapper input:valid + label {
+    @apply text-xs top-2 left-4;
+  }
+
+  .feature-list .features:nth-child(even) .content {
+    @apply order-1;
+  }
+  .feature-list .features:nth-child(even) .body {
+    @apply order-2;
+  }
+}
