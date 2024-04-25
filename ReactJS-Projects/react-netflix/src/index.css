@@ -67,3 +67,32 @@
     @apply order-2;
   }
 }
+
+.slick-dots {
+  @apply absolute top-[-50px] left-[44vw] pointer-events-none;
+}
+
+.slick-dots li {
+  @apply pointer-events-auto;
+}
+
+.slick-dots li button:before {
+  @apply content-[''] w-[22px] h-[3px] bg-[#959595] mx-1;
+}
+
+.slick-next,
+.slick-prev {
+  @apply h-full opacity-0 hover:opacity-100 transition-all flex flex-col justify-center items-center mt-[-2px];
+  svg {
+    @apply h-fit 
+      text-white text-4xl brightness-200;
+  }
+}
+.slick-next::before,
+.slick-prev::before {
+  @apply hidden;
+}
+
+.movie__info:before {
+  @apply content-[''] absolute bottom-0 z-[5] left-0 w-full h-[70px] block bg-gradient-to-t from-[rgb(20,20,20)] to-[rgba(20,20,20,.01)];
+}

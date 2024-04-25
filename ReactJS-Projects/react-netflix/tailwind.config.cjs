@@ -2,6 +2,15 @@
 export default {
   content: ["./src/**/*.{js,jsx}"],
   theme: {
+    screens: {
+      tablet: "640px",
+
+      laptop: "1024px",
+
+      desktop: "1280px",
+
+      tv: "1920px",
+    },
     extend: {
       fontFamily: {
         Regular: ["Regular", "Roboto"],
@@ -14,10 +23,10 @@ export default {
         center: true,
         padding: {
           DEFAULT: "1rem",
-          sm: "2rem",
-          lg: "4rem",
-          xl: "5rem",
-          "2xl": "6rem",
+          sm: "1rem",
+          lg: "1rem",
+          xl: "1rem",
+          "2xl": "1rem",
         },
       },
     },
