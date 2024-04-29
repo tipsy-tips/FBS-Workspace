@@ -6,17 +6,23 @@ import { PiCaretDownFill, PiInfo, PiPlayFill } from "react-icons/pi";
 import SliderMovie from "./SliderMovie";
 import ModalMovieInfo from "./ModalMovieInfo";
 import { movies } from "./data";
+import Footer from "../../Partials/Footer";
+import SliderMovieTop from "./SliderMovieTop";
+import ModalSearch from "./ModalSearch";
 
 const Movie = () => {
   const [showMovieModal, setMovieModal] = React.useState(false);
-
   const [showMovieData, setMovieData] = React.useState(null);
+
+  const [search, setSearch] = React.useState(false);
+
+  const handleShowSearch = () => setSearch(true);
 
   return (
     <div>
       <div className="bg-[#141414] text-white">
-        <div className="banner bg-[url('/public/images/Movies/inception-banner.jpg')] h-screen bg-cover relative isolate">
-          <div className="bg-gradient-to-b from-[rgba(0,0,0,0.5)] to-[rgba(0,0,0,00.2)]">
+        <div className="banner bg-[url('/public/images/Movies/banner4.jpg')] h-screen bg-cover relative isolate">
+          <div className="bg-gradient-to-b from-[rgb(20,20,20)] to-[rgba(20,20,20,.01)]">
             <div className="backdrop bg-black/30 absolute top-0 left-0 h-full w-full -z-10" />
             <div className="container ">
               <div className="header py-4 px-2 ">
@@ -53,7 +59,7 @@ const Movie = () => {
                   <div className="">
                     <ul className="flex items-center justify-center gap-5">
                       <li>
-                        <button>
+                        <button onClick={handleShowSearch}>
                           <GoSearch className="text-2xl" />
                         </button>
                       </li>
@@ -81,7 +87,7 @@ const Movie = () => {
         </div>
 
         <div className="absolute left-[5%] bottom-[30%]  text-white">
-          <h1 className="text-[70px] mb-5">{}</h1>
+          <h1 className="text-[70px] mb-5">Spirited Away</h1>
           <ul className="flex items-center gap-5">
             <li>
               <button className="px-5 py-1.5 rounded-md bg-white text-black font-Bold flex items-center gap-3">
@@ -112,6 +118,13 @@ const Movie = () => {
             grouping="Asian"
             sliderHeader={"Asian Movies"}
           />
+          <SliderMovieTop
+            setMovieModal={setMovieModal}
+            movies={movies}
+            setMovieData={setMovieData}
+            grouping="Top"
+            sliderHeader={"Top 10 Movies in the Philippines Today"}
+          />
         </div>
       </div>
 
@@ -122,6 +135,10 @@ const Movie = () => {
           showMovieData={showMovieData}
         />
       )}
+
+      {search && <ModalSearch setSearch={setSearch} />}
+
+      <Footer className="z-0" />
     </div>
   );
 };

@@ -9,20 +9,29 @@ import {
 } from "react-icons/fa";
 import { baselmgUrl } from "../../Helpers/functions-general";
 import { LiaAudioDescriptionSolid } from "react-icons/lia";
+import MovieRelatedCard from "./MovieRelatedCard";
+import { movies } from "./data";
+import Footer from "../../Partials/Footer";
 
 const ModalMovieInfo = ({ setMovieModal, showMovieData }) => {
   const handleClose = () => setMovieModal(false);
 
+  const getRelatedGenre = movies.filter(
+    (movies) =>
+      movies.genre === showMovieData.genre &&
+      movies.title !== showMovieData.title
+  );
+
   return (
-    <div className="fixed top-0 left-0  isolate w-full h-full">
+    <div className="fixed top-0 left-0  isolate w-full h-full z-10">
       <div className="backdrop h-full w-full absolute top-0 left-0 bg-black/50 z-[-1]"></div>
-      <main className="max-w-[1200px]  bg-[#181818] w-full  absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z[10] rounded-md">
+      <main className="max-w-[1200px] max-h-[900px]  bg-[#181818] w-full  absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z[10] rounded-md">
         <div className="modal__banner ">
           <div className="movie__info relative">
             <img
               src={`${baselmgUrl}/Movies/${showMovieData.image}`}
               alt=""
-              className="opacity-80"
+              className="opacity-80 brightness-75 w-[1200px] h-[300px] object-cover"
             />
             <button
               type="button"
@@ -96,6 +105,13 @@ const ModalMovieInfo = ({ setMovieModal, showMovieData }) => {
               </li>
             </ul>
           </div>
+        </div>
+
+        <h3 className="pl-4 my-3 text-white text-xl">More like this</h3>
+        <div className="grid grid-cols-3 gap-4 max-h-[300px] pb-10 overflow-y-auto px-4">
+          {getRelatedGenre.map((item, key) => (
+            <MovieRelatedCard item={item} />
+          ))}
         </div>
       </main>
     </div>

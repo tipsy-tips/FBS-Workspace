@@ -96,3 +96,11 @@
 .movie__info:before {
   @apply content-[''] absolute bottom-0 z-[5] left-0 w-full h-[70px] block bg-gradient-to-t from-[rgb(20,20,20)] to-[rgba(20,20,20,.01)];
 }
+
+.scroller {
+  overflow-y: scroll;
+  scrollbar-color: #0a4c95 #c2d2e4;
+}
+
+.thumbnail:first-child .topImg img:first-child {
+}

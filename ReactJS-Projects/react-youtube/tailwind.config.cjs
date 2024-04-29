@@ -12,14 +12,12 @@ export default {
       tv: "1920px",
     },
     extend: {
-      textShadow: {
-        sm: "0 1px 2px var(--tw-shadow-color)",
-        DEFAULT: "0 2px 4px var(--tw-shadow-color)",
-        lg: "0 8px 16px var(--tw-shadow-color)",
+      gridTemplateColumns: {
+        "auto-fill-100": "repeat(auto-fill, minmax(100px, 5fr))",
+        "auto-fit-100": "repeat(auto-fit, minmax(100px, 5fr))",
       },
-      fontFamily: {
-        Regular: ["Regular", "Roboto"],
-        Bold: ["Bold", "Roboto"],
+      colors: {
+        accent: "#c11119",
       },
       container: {
         center: true,
@@ -33,5 +31,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };

@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,600;1,400;1,600&display=swap");
+
+  * {
+    @apply min-h-0 min-w-0;
+  }
+
+  body {
+    @apply bg-white;
+  }
+
+  html,
+  body,
+  label {
+    font-family: "Roboto", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-black;
+  }
+
+  p {
+    @apply mb-4 text-black;
+  }
+
+  img {
+    @apply block w-full;
+  }
+}
+
+@layer components {
+  .categorySlider li {
+    @apply px-3 p-1 text-black w-auto h-[35px] rounded-lg block bg-[#f0f0f0];
+  }
+}
+
+.slick-slide {
+  @apply w-auto mx-2;
+}
+
+.slick-slide h3 {
+  @apply py-1 px-4 bg-[#f0f0f0] rounded-lg;
+}
+
+.slick-next,
+.slick-prev {
+  @apply h-full flex items-center;
+  svg {
+    @apply h-fit 
+      text-black text-xl;
+  }
+}
+
+.slick-next {
+  @apply w-[50px] bg-transparent;
+}
+
+.slick-next svg {
+  @apply ml-7;
+}
+
+.slick-next::before,
+.slick-prev::before {
+  @apply hidden;
+}
