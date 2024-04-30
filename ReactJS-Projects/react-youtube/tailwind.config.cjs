@@ -12,12 +12,11 @@ export default {
       tv: "1920px",
     },
     extend: {
-      gridTemplateColumns: {
-        "auto-fill-100": "repeat(auto-fill, minmax(100px, 5fr))",
-        "auto-fit-100": "repeat(auto-fit, minmax(100px, 5fr))",
-      },
       colors: {
-        accent: "#c11119",
+        primary: {
+          light: "#f8fafc",
+          dark: "#2d3748",
+        },
       },
       container: {
         center: true,

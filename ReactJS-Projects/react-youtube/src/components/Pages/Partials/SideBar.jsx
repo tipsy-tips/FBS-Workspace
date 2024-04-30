@@ -23,10 +23,11 @@ import settings from "../../../../public/assets/images/Icons/settings.svg";
 import trending from "../../../../public/assets/images/Icons/trending.svg";
 import watchLater from "../../../../public/assets/images/Icons/watchlater.svg";
 import ytMusic from "../../../../public/assets/images/Icons/yt-music.svg";
+import Footer from "./Footer";
 
 const SideBar = () => {
   return (
-    <div className="side__menu py-3 w-[300px] h-screen overflow-y-scroll bg-white">
+    <div className="side__menu py-3 w-[250px] h-screen overflow-y-scroll">
       <ul className="flex w-[230px] py-3 mx-auto flex-col border-b border-gray-200">
         <li className="bg-[#f0f0f0] hover:bg-[#f2f2f2] py-1.5 rounded-lg mx-2">
           <div className="flex gap-5 pl-4 items-center">
@@ -179,25 +180,7 @@ const SideBar = () => {
           </div>
         </li>
       </ul>
-      <ul className="flex w-[230px] py-3 px-4 mx-auto flex flex-wrap text-xs text-gray-500 font-bold">
-        <li className="mb-1 mr-2">About</li>
-        <li className="mb-1 mr-2">Press</li>
-        <li className="mb-1 mr-2">Copyright</li>
-        <li className="mb-1 mr-2">Contact us</li>
-        <li className="mb-1 mr-2">Creators</li>
-        <li className="mb-1 mr-2">Advertise</li>
-        <li className="mb-1 mr-2">Developers</li>
-      </ul>
-      <ul className="flex w-[230px] py-3 px-4 mx-auto flex flex-wrap text-xs text-gray-500 font-bold">
-        <li className="mb-1 mr-2">Terms</li>
-        <li className="mb-1 mr-2">Privacy</li>
-        <li className="mb-1 mr-2">Policy & Safety</li>
-        <li className="mb-1 mr-2">How youtube works</li>
-        <li className="mb-1 mr-2">Test new features</li>
-      </ul>
-      <ul className="flex w-[230px] py-3 px-4 mx-auto flex flex-wrap text-xs text-gray-500 font-bold">
-        <li className="mb-1 mr-2">© 2024 Google LLC</li>
-      </ul>
+      <Footer />
     </div>
   );
 };

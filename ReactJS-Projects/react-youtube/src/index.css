@@ -9,8 +9,15 @@
     @apply min-h-0 min-w-0;
   }
 
+  .dark {
+    --primary: 0, 0, 0;
+    --secondary: 22, 22, 22;
+    --content: 255, 255, 255;
+    --line: 70, 70, 70;
+  }
+
   body {
-    @apply bg-white;
+    @apply h-screen;
   }
 
   html,
@@ -71,4 +78,18 @@
 .slick-next::before,
 .slick-prev::before {
   @apply hidden;
+}
+
+::-webkit-scrollbar {
+  transition: all;
+  width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(54, 54, 54, 0.864);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(54, 56, 58);
 }

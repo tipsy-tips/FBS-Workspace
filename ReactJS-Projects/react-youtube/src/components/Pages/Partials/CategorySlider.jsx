@@ -33,7 +33,7 @@ const CategorySlider = () => {
     prevArrow: <PrevArrow />,
   };
   return (
-    <div className="slider-container px-5">
+    <div className="slider-container px-5 ">
       <Slider {...settings}>
         <div>
           <h3>All</h3>

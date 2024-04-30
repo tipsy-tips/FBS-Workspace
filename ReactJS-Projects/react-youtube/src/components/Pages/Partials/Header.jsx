@@ -27,10 +27,27 @@ import watchLater from "../../../../public/assets/images/Icons/watchlater.svg";
 import ytMusic from "../../../../public/assets/images/Icons/yt-music.svg";
 
 const Header = () => {
+  const [theme, setTheme] = React.useState(
+    localStorage.getItem("theme") || "light"
+  );
+
+  const handleToggleThemeMode = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    localStorage.setItem("theme", newTheme);
+    setTheme(newTheme);
+  };
+
+  React.useEffect(() => {
+    document.querySelector("body").classList.add(theme);
+    return () => {
+      document.querySelector("body").classList.remove(theme);
+    };
+  }, [theme]);
+
   return (
-    <div>
-      <div className="top-nav px-5">
-        <header className="py-1 flex gap-5 justify-between">
+    <div className="h-[60px]">
+      <div className="top-nav px-5 ">
+        <header className="py-1 flex gap-5 justify-between ">
           <div className="logo-burger flex items-center gap-5">
             <div className="burger__menu space-y-1">
               <span className="block h-0.5 w-5 animate-pulse bg-gray-600"></span>
@@ -58,7 +75,10 @@ const Header = () => {
             </div>
 
             <div className="ml-5 bg-[#f2f2f2] hover:bg-[#d9d9d9] flex items-center rounded-full p-3 min-h-[40px] min-w-[40px]">
-              <FaMicrophone className="text-xl text-black" />
+              <FaMicrophone
+                className="text-xl text-black"
+                onClick={handleToggleThemeMode}
+              />
             </div>
           </div>
           <div className="self-center">
