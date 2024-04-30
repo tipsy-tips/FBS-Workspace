@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Student from "./components/pages/developer/database/Student";
+import "./index.css";
 
 function App() {
   return (
