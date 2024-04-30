@@ -3,23 +3,78 @@
 @tailwind utilities;
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --primary: 255 255 255;
+  --secondary: 242 242 242;
+  --accent: 80 221 144;
+  --content: 0 0 0;
+  --line: 212 21 212;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.dark {
+  --primary: 0 0 0;
+  --secondary: 22 22 22;
+  --accent: 80 221 144;
+  --content: 255 25 255;
+  --line: 14 14 14;
+}
+
+@layer base {
+  body {
+    @apply bg-primary text-content;
+  }
+  a {
+    @apply text-content no-underline;
+  }
+
+  ul {
+    @apply list-none text-content;
+  }
+
+  img {
+    @apply block w-full h-auto bg-cover;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold text-content;
+  }
+  h1 {
+    @apply text-3xl mb-4;
+  }
+  h2 {
+    @apply text-xl mb-4;
+  }
+  h3 {
+    @apply text-lg mb-4;
+  }
+  h4 {
+    @apply text-base mb-4;
+  }
+  p {
+    @apply mb-2 text-content;
+  }
+}
+
+@layer components {
+  .nav {
+    @apply space-y-4 mt-20;
+  }
+  .nav__link {
+    @apply p-1 pl-8;
+  }
+
+  .nav__link.active a {
+    @apply text-accent;
+  }
+
+  .nav__link a {
+    @apply flex gap-3 items-center;
+  }
+
+  .nav__link.active {
+    @apply border-l-2  border-accent;
   }
 }
