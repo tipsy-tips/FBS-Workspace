@@ -5,6 +5,7 @@ import { FaPlus, FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import StudentTable from "./StudentTable";
 import DatabaseInfo from "./DatabaseStudent";
+import ModalAddStudent from "./ModalAddStudent";
 
 const Student = () => {
   const [showInfo, setShowInfo] = React.useState(false);
@@ -53,6 +54,7 @@ const Student = () => {
           </div>
         </main>
       </section>
+      <ModalAddStudent />
     </>
   );
 };
