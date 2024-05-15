@@ -171,7 +171,6 @@ function checkCreate($object)
     return $query;
 }
 
-
 // Read all
 function checkReadAll($object)
 {
@@ -195,7 +194,6 @@ function checkReadKey($object)
     return $query;
 }
 
-
 // Update 
 function checkUpdate($object)
 {
@@ -217,6 +215,13 @@ function checkDelete($object)
     $query = $object->delete();
     checkQuery($query, "There's a problem processing your request. (delete)");
     return $query;
+}
+
+// Result data
+function getResultData($query)
+{
+    $data = $query->fetchAll();
+    return $data;
 }
 
 // send response

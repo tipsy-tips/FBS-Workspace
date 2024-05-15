@@ -1,32 +1,33 @@
 <?php
-
 require '../../core/header.php';
 require '../../core/functions.php';
 require '../../models/Student.php';
 
-$body = files_get__contents('php://input');
+$body = file_get_contents('php://input');
 $data = json_decode($body, true);
 
-if (isset($_SERVER['HTTP_AUTHORIZATION'])) {
+if(isset($_SERVER['HTTP_AUTHORIZATION'])) {
     checkApiKey();
 
-    if($_SERVER['REQUEST_METHOD'] === 'GET') {
+    if($_SERVER['REQUEST_METHOD'] === 'GET'){
         $result = require 'read.php';
         sendResponse($result);
         exit;
     }
-    
-    if($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $result = require 'create.php';
         sendResponse($result);
         exit;
     }
-    if($_SERVER['REQUEST_METHOD'] === 'PUT') {
+
+    if($_SERVER['REQUEST_METHOD'] === 'PUT'){
         $result = require 'update.php';
         sendResponse($result);
         exit;
     }
-    if($_SERVER['REQUEST_METHOD'] === 'DELETE') {
+
+    if($_SERVER['REQUEST_METHOD'] === 'DELETE'){
         $result = require 'delete.php';
         sendResponse($result);
         exit;
@@ -34,4 +35,5 @@ if (isset($_SERVER['HTTP_AUTHORIZATION'])) {
 }
 
 http_response_code(200);
+// Assuming checkAccess() is defined in one of your included files
 checkAccess();

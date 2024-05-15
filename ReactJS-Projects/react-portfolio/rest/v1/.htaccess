@@ -1,0 +1,31 @@
+RewriteEngine On
+# use for authentication
+RewriteCond %{HTTP:Authorization} ^(.+)$
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+Header set Access-Control-Allow-Origin *
+
+#################################### ALL FOR DEVELOPER #################################
+RewriteRule ^upload/photo$ core/upload-photo.php [L]
+
+
+### SETTING ROLES ###
+RewriteRule ^projects$ controllers/projects/projects.php [L]
+RewriteRule ^projects/([0-9]+)$ controllers/projects/projects.php?projectsid=$1 [L]
+RewriteRule ^projects/active/([0-9]+)$ controllers/projects/active.php?projectsid=$1 [L]
+
+RewriteRule ^counter$ controllers/counter/counter.php [L]
+RewriteRule ^counter/([0-9]+)$ controllers/counter/counter.php?counterid=$1 [L]
+RewriteRule ^counter/active/([0-9]+)$ controllers/counter/active.php?counterid=$1 [L]
+
+RewriteRule ^skills$ controllers/skillslist/skillslist.php [L]
+RewriteRule ^skills/([0-9]+)$ controllers/skillslist/skillslist.php?skillsid=$1 [L]
+RewriteRule ^skills/active/([0-9]+)$ controllers/skillslist/active.php?skillsid=$1 [L]
+
+RewriteRule ^skillsimage$ controllers/skillsimage/skillsimage.php [L]
+RewriteRule ^skillsimage/([0-9]+)$ controllers/skillsimage/skillsimage.php?skillsimageid=$1 [L]
+RewriteRule ^skillsimage/active/([0-9]+)$ controllers/skillsimage/active.php?skillsimageid=$1 [L]
+
+
