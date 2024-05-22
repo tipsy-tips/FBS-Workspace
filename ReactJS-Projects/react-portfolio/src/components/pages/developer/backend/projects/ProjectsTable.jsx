@@ -43,6 +43,7 @@ const ProjectsTable = ({ isLoading, isFetching, projects, setItemEdit }) => {
           <thead className="sticky top-0 bg-primary z-10">
             <tr>
               <th className="w-[20px]">#</th>
+              <th className="w-[150px]">Image Name</th>
               <th className="w-[150px]">Image Link</th>
               <th className="w-[100px]">Action</th>
             </tr>
@@ -51,6 +52,9 @@ const ProjectsTable = ({ isLoading, isFetching, projects, setItemEdit }) => {
             {isLoading && (
               <tr className="max-w-sm animate-pulse">
                 <td className="">
+                  <div className="table-shimmer"></div>
+                </td>
+                <td>
                   <div className="table-shimmer"></div>
                 </td>
                 <td>
@@ -78,6 +82,7 @@ const ProjectsTable = ({ isLoading, isFetching, projects, setItemEdit }) => {
               <tr key={key}>
                 <td>{item.projects_aid}</td>
                 <td>{item.projects_image}</td>
+                <td>{item.projects_link}</td>
                 <td className="table-action">
                   <ul>
                     {item.projects_is_active ? (

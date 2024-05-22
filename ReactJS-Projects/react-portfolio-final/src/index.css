@@ -1,0 +1,400 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url(../fonts/roboto-regular.woff2) format(".woff2");
+}
+
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url(../fonts/roboto-bold.woff2) format(".woff2");
+}
+
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url(../fonts/roboto-medium.woff2) format(".woff2");
+}
+
+:root {
+  --primary: 255 255 255;
+  --secondary: 242 242 242;
+  --accent: 80 221 144;
+  --content: 31 31 31;
+  --line: 80 221 144;
+  --alert: 220 38 38;
+  --cancel: 127 127 127;
+  --info: 255 255 255;
+  --warning: 255 128 44;
+}
+
+:root {
+  --uiPrimary: 255 255 255;
+  --cGreen: 13 183 95;
+  --cOrange: 255 154 0;
+  --cBlue: 1 71 255;
+  --cRed: 254 0 1;
+  --uiContent: 0 0 0;
+  --uiLine: 14 14 14;
+}
+
+.dark {
+  --primary: 0 0 0;
+  --secondary: 10 10 10;
+  --accent: 80 221 144;
+  --content: 255 255 255;
+  --line: 14 14 14;
+  --alert: 220 38 38;
+  --cancel: 127 127 127;
+  --info: 0 0 0;
+  --warning: 255 128 44;
+}
+
+@layer base {
+  html {
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    input[type="number"] {
+      -moz-appearance: textfield;
+    }
+    ::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px rgb(16, 16, 16);
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: rgba(54, 54, 54, 0.864);
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgb(5, 103, 201);
+    }
+
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-primary text-content font-poppins;
+  }
+  a {
+    @apply text-content no-underline;
+  }
+
+  ul {
+    @apply list-none text-content;
+  }
+
+  img {
+    @apply block w-full h-auto bg-cover;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-content;
+  }
+  h1 {
+    @apply text-3xl mb-4;
+  }
+  h2 {
+    @apply text-xl mb-4;
+  }
+  h3 {
+    @apply text-lg mb-4;
+  }
+  h4 {
+    @apply text-base mb-4;
+  }
+  p {
+    @apply mb-2 text-content !leading-6 opacity-60;
+  }
+}
+
+@layer components {
+  .btn--ui {
+    @apply px-10 py-2 transition-all;
+  }
+
+  .btn--noBorderIcon {
+    @apply translate-x-0 text-cGreen flex items-center gap-4;
+  }
+
+  .btn--noBorderIcon:hover {
+    @apply translate-x-1 transition-all;
+  }
+
+  .btn--transparent {
+    @apply border rounded-md border-cGreen text-cGreen;
+  }
+
+  .btn--transparent:hover {
+    @apply bg-cGreen text-white ease-in-out transition-colors;
+  }
+
+  .btn {
+    @apply px-2 py-1 rounded-md text-sm transition-colors flex items-center gap-2;
+  }
+
+  .btn:disabled {
+    @apply cursor-not-allowed opacity-60;
+  }
+
+  .btn--accent {
+    @apply bg-accent text-white;
+  }
+
+  .btn--cancel {
+    @apply bg-cancel text-white;
+  }
+
+  .btn--warning {
+    @apply bg-warning text-white;
+  }
+
+  .btn--info {
+    @apply bg-info text-white;
+  }
+
+  .btn--alert {
+    @apply bg-alert text-white;
+  }
+
+  .btn--form {
+    @apply p-1.5 w-1/2 flex justify-center items-center gap-2;
+  }
+
+  table {
+    @apply w-full text-[15px];
+  }
+
+  table th {
+    @apply font-bold py-4 px-2 text-left;
+  }
+
+  table td {
+    @apply p-2 text-left;
+  }
+
+  table tbody tr:nth-child(odd) {
+    @apply bg-accent bg-opacity-10;
+  }
+
+  .table-action ul {
+    @apply flex items-center gap-4 text-xl;
+  }
+
+  .tooltip {
+    @apply relative;
+  }
+
+  .tooltip::after {
+    @apply absolute content-[attr(data-tooltip)] text-xs p-1 px-3 text-content bg-secondary rounded-lg bg-opacity-90 top-[calc(100%+10px)] left-1/2 -translate-x-1/2 scale-0 transition-transform;
+  }
+
+  .tooltip:hover::after {
+    @apply scale-100;
+  }
+
+  .nav {
+    @apply space-y-4 mt-20;
+  }
+
+  .nav__link {
+    @apply p-3 pl-8;
+  }
+
+  .nav__link.active a {
+    @apply text-accent;
+  }
+
+  .nav__link a {
+    @apply flex gap-3 items-center;
+  }
+
+  .nav__link.active {
+    @apply ml-0.5 border-l-4 bg-accent/20 font-bold border-accent;
+  }
+
+  .tab-link {
+    @apply px-6 py-3;
+  }
+  .tab-link.active {
+    @apply border-b border-accent;
+  }
+  .tab-link.active a {
+    @apply text-accent;
+  }
+
+  .input-wrap {
+    @apply mb-3 relative;
+  }
+
+  .input-wrap label {
+    @apply block mb-1;
+  }
+
+  .input-wrap input,
+  .input-wrap select,
+  .input-wrap textarea {
+    @apply block w-full text-content focus:text-content p-0.5 rounded-md outline-none border-2 focus:border-accent focus:bg-accent/50;
+  }
+
+  .input-wrap small {
+    @apply absolute top-1 right-1 text-red-500 italic;
+  }
+
+  .form-action {
+    @apply flex gap-2;
+  }
+
+  .loading-bar::after {
+    @apply content-[''] absolute top-0 left-0 w-[180%] h-full bg-gradient-to-r from-transparent via-accent to-transparent  animate-loading;
+  }
+}
+
+.spinner circle {
+  fill: none;
+  /* stroke: var(--light); */
+  stroke-width: 6;
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  animation: dash 1s ease-in-out infinite;
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 90, 200;
+    stroke-dashoffset: -35px;
+  }
+
+  100% {
+    stroke-dashoffset: -110px;
+  }
+}
+
+.table-shimmer {
+  @apply h-2.5 bg-gray-200 rounded-full dark:bg-accent w-full;
+}
+
+/*~~~~~~~~~~~~~~~~~~UI CSS~~~~~~~~~~~~~~~~~~~~~~*/
+
+input,
+textarea {
+  @apply p-1 text-sm border-2 focus:border-cGreen focus:outline-none focus:ring-0;
+}
+
+.block-header-caption {
+  @apply text-cGreen mb-0 text-xl;
+}
+
+.block-header-title {
+  @apply font-bold text-[40px] leading-[60px];
+}
+
+.footer-block ul li a {
+  @apply text-white decoration-white transition-all;
+}
+
+.footer-block ul li:hover {
+  @apply underline decoration-white font-bold;
+}
+
+.counter-item {
+  @apply w-full p-8 px-10 flex flex-col items-center justify-center;
+}
+
+.counter-item:nth-child(1) {
+  @apply pl-0 phone:p-8;
+}
+
+.counter-item:nth-child(2) {
+  @apply border-x border-[#0000002d] phone:border-0 tablet:border-x;
+}
+
+.counter-item:nth-child(3) {
+  @apply pr-0 phone:p-8;
+}
+.skills ul {
+  @apply space-y-8;
+}
+
+.skills ul li {
+  @apply text-justify list-disc;
+}
+
+.skills-icon img {
+  @apply size-[90px] object-contain;
+}
+
+/* the slides */
+.projects .slick-slide {
+  @apply relative px-10 hover:scale-105 object-contain transition-transform;
+}
+
+.projects .slick-list {
+  @apply z-10 relative before:pointer-events-none before:shadow-[10px_10px_81px_50px_rgba(255,255,255,0.75)inset] before:w-full before:h-full before:absolute before:z-10 before:content-[""] before:block after:h-full after:w-[1px] after:absolute after:bg-gray-200 after:top-0 after:right-1/2 after:z-[-1] phone:after:hidden desktop:after:block;
+}
+
+.slick-next,
+.slick-prev {
+  @apply h-full transition-all flex flex-col justify-center items-center mt-[-2px];
+  svg {
+    @apply h-fit 
+      text-cGreen text-4xl active:scale-150 transition-transform;
+  }
+}
+.slick-next::before,
+.slick-prev::before {
+  @apply hidden;
+}
+
+.projects .slick-dots {
+  @apply bg-cGreen rounded-full !flex justify-center right-1/2 translate-x-1/2 items-center w-fit z-10 h-[25px] bottom-[-35px];
+}
+
+.slick-dots li.slick-active button::before {
+  @apply text-white text-[10px] opacity-100;
+}
+
+.slick-dots li button::before {
+  @apply text-[10px];
+}
+
+.slick-dots li:hover button::before {
+  @apply text-white;
+}
+
+td.ContributionCalendar-label span[aria-hidden="true"] {
+  @apply left-[5px];
+}
+
+div.float-right {
+  text-align: right;
+  padding: 0 14px 10px 0;
+  display: block;
+  float: unset;
+}
+
+table {
+  @apply border-separate;
+}

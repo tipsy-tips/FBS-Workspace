@@ -26,7 +26,8 @@ function PrevArrow(props) {
 const Projects = () => {
   const { data: projects } = useQueryData(
     "/v1/projects", // endpointO
-    "get" // method
+    "get", // method
+    "projectsKey" //key
   );
 
   var settings = {
